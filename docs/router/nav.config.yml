@@ -1,0 +1,151 @@
+zh:
+  guide:
+    - title: 指南
+      name: Guide
+      items:
+        - title: 开始使用
+          name: Start
+        - title: 环境设置
+          name: Env
+  resource:
+    - title: 资源
+      name: Resource
+      items:
+        - title: 设计资源
+          name: Design
+        - title: 色彩
+          name: Color
+        - title: 字体
+          name: Typography
+        - title: 日期工具
+          name: MiniMoment
+          notab: true
+        - title: 数字中文互换
+          name: numberzh
+  components:
+    - title: 综述
+      name: Docs
+      groups:
+        - title: 样式
+          items:
+            - title: 栅格
+              name: Grid
+            - title: layout布局
+              name: Layout
+            - title: 图标
+              name: Icon
+            - title: 扩展
+              name: Extend
+    - title: 组件
+      name: Docs
+      groups:
+        - title: 表单
+          items:
+            - title: 按钮
+              name: Button
+            - title: 输入框
+              name: Input
+            - title: 单选框
+              name: Radio
+            - title: 多选框
+              name: Checkbox
+            - title: 下拉选择框
+              name: Select
+            - title: 匹配选择框
+              name: Autocomplete
+            - title: 数字输入框
+              name: Numberinput
+            - title: 标签输入框
+              name: TagInput
+            - title: 日期选择
+              name: Datepicker
+            - title: 时间选择
+              name: TimePicker
+            - title: 日期时间选择
+              name: DateTimePicker
+            - title: 日期范围选择
+              name: DateRangePicker
+            - title: 开关
+              name: Switch
+            - title: 滑块
+              name: Slider
+            - title: 评分
+              name: Rate
+            - title: 表单
+              name: Form
+        - title: 视图
+          items:
+            - title: 表格
+              name: Table
+            - title: 分页
+              name: Pagination
+            - title: 搜索框
+              name: Search
+            - title: 树
+              name: Tree
+            - title: 树形选择
+              name: Treepick
+            - title: 徽标数
+              name: Badge
+            - title: 进度条
+              name: Progress
+            - title: 进度环
+              name: Circle
+            - title: 头像
+              name: Avatar
+            - title: 图片预览
+              name: ImagePreview
+            - title: 跑马灯
+              name: Carousel
+            - title: 穿梭框
+              name: Transfer
+            - title: 标签
+              name: Tag
+            - title: 面板
+              name: Panel
+        - title: 导航
+          items:
+            - title: 菜单
+              name: Menu
+            - title: 面包屑
+              name: Breadcrumb
+            - title: 步骤条
+              name: Steps
+            - title: 标签页
+              name: Tabs
+            - title: 时间轴
+              name: Timeline
+            - title: 下拉菜单
+              name: DropdownMenu
+            - title: 下拉定制框
+              name: DropDownCustom
+            - title: 系统总标签
+              name: systab
+        - title: 其他
+          items:
+            - title: 加载中
+              name: Loading
+            - title: 加载进度
+              name: LoadingBar
+            - title: 图钉
+              name: Affix
+            - title: 返回顶部
+              name: BackTop
+            - title: 滚动到视图内
+              name: ScrollIntoView
+            - title: 复制到剪贴板
+              name: ClipBoard
+            - title: 超出文本省略
+              name: TextEllipsis
+        - title: 消息
+          items:
+            - title: 提示
+              name: Message
+            - title: 通知
+              name: Notice
+            - title: 弹出框
+              name: Modal
+            - title: 气泡提示
+              name: Tooltip
+            - title: 确认提示
+              name: Poptip
