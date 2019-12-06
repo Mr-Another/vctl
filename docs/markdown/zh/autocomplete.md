@@ -568,22 +568,22 @@ autocomplete 有三种数据类型：key,title,object，如果需求更复杂，
 ### AutoComplete 参数
 
 | 参数                     | 说明                                                      | 类型          | 可选值             | 默认值           |
-| ------------------------ | --------------------------------------------------------- | ------------- | ------------------ | ---------------- |
-| disabled                 | 是否禁用                                                  | Boolean       | true, false        | false            |
+| ------------------- | --------------------------------------------- | ---------- | -------------- | ------------- |
+| disabled                 | 是否禁用                                                  | Boolean       | -                 | false             |
 | type                     | 类型                                                      | String        | key, object, title | key              |
-| option                   | 配置项，详细参见下面的 option 说明                        | Object        | -                |                  |
-| multiple                 | 多选                                                      | Boolean       | true, false            | false            |
-| mustMatch                | 是否必须是选择的项                                        | Boolean       | true, false        | true             |
-| datas                    | 选择的数据                                                | Array, Object | -                  |                  |
-| dict                     | 调用全局定义的字典                                        | String        | -                  | -                |
-| placeholder              | 展示默认提示语                                            | String        | -                  | 请选择           |
-| show                     | 默认展示的文字，针对与存储 key 值，但是拥有 show 值的情景 | String        | -                  | -                |
-| emptyContent             | 没有搜索到值的提示语                                      | String        | -                  | 未搜索到相关数据 |
-| config                   | 使用全局配置的方法                                        | String        | -                  | -                |
-| className                | 自定义 className                                          | String        | -                  |                  |
-| autoSelectFirst          | 是否自动选中第一个选项                                    | Boolean       | true, false                  | false            |
-| endInput                 | 设定特殊字符触发 enter                                    | String        | -                  |                  |
-| showDropdownWhenNoResult | 当无数据的时候，是否展示下拉列表                          | Boolean       | true, false                  | true             |
+| option                   | 配置项，详细参见下面的 option 说明                       | Object       | -                  |                   |
+| multiple                 | 多选                                                       | Boolean       | -                 | false             |
+| mustMatch              | 是否必须是选择的项                                        | Boolean       | -                 | true              |
+| datas                   | 选择的数据                                                | Array, Object | -                 |                   |
+| dict                     | 调用全局定义的字典                                        | String         | -                 | -                 |
+| placeholder             | 展示默认提示语                                            | String          | -                 | 请选择            |
+| show                    | 默认展示的文字，针对与存储 key 值，但是拥有 show 值的情景 | String      | -                 | -                 |
+| emptyContent           | 没有搜索到值的提示语                                       | String        | -                 | 未搜索到相关数据 |
+| config                   | 使用全局配置的方法                                         | String        | -                 | -                 |
+| className              | 自定义 className                                           | String        | -                 |                   |
+| autoSelectFirst         | 是否自动选中第一个选项                                     | Boolean       | -                 | false             |
+| endInput                | 设定特殊字符触发 enter                                     | String        | -                 |                   |
+| showDropdownWhenNoResult | 当无数据的时候，是否展示下拉列表                     | Boolean       | -                 | true              |
 
 ### AutoComplete 事件
 
