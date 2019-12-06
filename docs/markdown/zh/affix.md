@@ -149,7 +149,7 @@
 | offsetBottom   | 定位在距离窗口底部达到指定偏移量后 | Number   | -      | -      |
 | fixedOffsetTop | 定位在距离页面顶部达到指定偏移量后 | Number   | -      | -      |
 | container      | 使用容器内的定位                   | Function | -      | -      |
-| disabled       | 禁用                               | Boolean  | -      | false  |
+| disabled       | 禁用                               | Boolean  | true, false  | false  |
 
 ### affix 事件
 

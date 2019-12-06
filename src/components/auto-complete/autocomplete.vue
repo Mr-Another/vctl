@@ -79,39 +79,41 @@ export default {
   name: "blueAutoComplete",
   mixins: [Locale],
   props: {
-    multiple: {
+
+    // 参数
+    multiple: { //多选
       type: Boolean,
       default: false
     },
-    mustMatch: {
+    mustMatch: { // 是否必须是选择的项
       type: Boolean,
       default: true
     },
-    autoSelectFirst: {
+    autoSelectFirst: { // 是否自动选中第一个选项
       type: Boolean,
       default: false
     },
-    type: {
+    type: { // 类型
       type: [String],
       default: "key" // object, title
     },
-    disabled: {
+    disabled: { // 是否禁用
       type: Boolean,
       default: false
     },
-    datas: [Array, Object],
-    dict: String,
-    placeholder: {
+    datas: [Array, Object], // 选择的数据
+    dict: String, // 调用全局定义的字典
+    placeholder: { // 展示默认提示语
       type: String
     },
     value: [Number, String, Array, Object],
     option: Object,
-    show: String,
-    emptyContent: {
+    show: String, // 默认展示的文字，针对与存储 key 值，但是拥有 show 值的情景
+    emptyContent: { // 没有搜索到值的提示语
       type: [String, Object]
     },
-    config: String,
-    className: String,
+    config: String, // 使用全局配置的方法
+    className: String, // 自定义 className
     delay: {
       type: Number,
       default: 100
