@@ -67,6 +67,7 @@ import Carousel from "@/src/components/carousel";
 import Collapse from "@/src/components/collapse";
 import CollapseItem from "@/src/components/collapse-item";
 import Systab from "@/src/components/systab";
+import DataTable from "@/src/components/data-table"
 
 import style from "@/src/directives/style";
 import tooltip from "@/src/directives/tooltip";
@@ -157,7 +158,8 @@ const components = {
   HFooter,
   Content,
   Sider,
-  Layout
+  Layout,
+  DataTable
 };
 
 const directives = {
@@ -239,19 +241,19 @@ const BlueUI = Object.assign(
 
 BlueUI.install = install;
 
-console.log(
-  ` %c
+// console.log(
+//   ` %c
   
-██████╗ ██╗     ██╗   ██╗███████╗██╗   ██╗██╗
-██╔══██╗██║     ██║   ██║██╔════╝██║   ██║██║
-██████╔╝██║     ██║   ██║█████╗  ██║   ██║██║
-██╔══██╗██║     ██║   ██║██╔══╝  ██║   ██║██║
-██████╔╝███████╗╚██████╔╝███████╗╚██████╔╝██║
-╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝
+// ██████╗ ██╗     ██╗   ██╗███████╗██╗   ██╗██╗
+// ██╔══██╗██║     ██║   ██║██╔════╝██║   ██║██║
+// ██████╔╝██║     ██║   ██║█████╗  ██║   ██║██║
+// ██╔══██╗██║     ██║   ██║██╔══╝  ██║   ██║██║
+// ██████╔╝███████╗╚██████╔╝███████╗╚██████╔╝██║
+// ╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝
 
-                       一个基于Vue.js的UI组件库
-`,
-  "color: #3074af"
-);
+//                        一个基于Vue.js的UI组件库
+// `,
+//   "color: #3074af"
+// );
 
 export default BlueUI;

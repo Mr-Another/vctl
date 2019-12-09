@@ -3,7 +3,7 @@
     <div class="blue-table-header" :style="{'padding-right': (scrollWidth+'px')}">
       <table :style="{'margin-left': (-scrollLeft+'px')}">
         <colgroup>
-          <col v-if="checkbox" width="60">
+          <col v-if="checkbox" width="40">
           <col
             v-for="(c, index) of computeColumns"
             :width="getWidth(c)"
@@ -55,7 +55,7 @@
       <div class="blue-table-body" v-show="datas.length" :style="bodyStyle">
         <table>
           <colgroup>
-            <col v-if="checkbox" width="60">
+            <col v-if="checkbox" width="40">
             <col
               v-for="(c, index) of computeColumns"
               :width="getWidth(c)"
@@ -95,7 +95,7 @@
       <div v-if="fixedColumnLeft.length" class="blue-table-fixed-left" :style="fixedBodyStyle">
         <table :style="{'margin-top': (-scrollTop+'px'), width: (tableWidth + 'px')}">
           <colgroup>
-            <col v-if="checkbox" width="60">
+            <col v-if="checkbox" width="40">
             <col
               v-for="(c, index) of computeColumns"
               :width="getWidth(c)"
@@ -156,7 +156,7 @@
     <div v-if="fixedColumnLeft.length" class="blue-table-fixed-header-left">
       <table :style="{width: leftWidth + 'px'}">
         <colgroup>
-          <col v-if="checkbox" width="60">
+          <col v-if="checkbox" width="40px">
           <col
             v-for="(c, index) of fixedColumnLeft"
             :width="getWidth(c)"
