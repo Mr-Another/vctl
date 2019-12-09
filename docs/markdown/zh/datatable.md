@@ -19,6 +19,7 @@
       :filters="filters"
       :advfilters="advfilters"
       ref="table"
+      checkbox
       border
       :pagination="pagination"
       @sort="sort"
@@ -232,7 +233,7 @@
 | showPagination | DataTable使用分页器 | Boolean | | true |
 | ths | 自定义列表表头（详见table自定义表头） | Array | - | [] |
 
-### DataTable 方法
+### DataTable 事件
 |方法 | 说明 |
 |-----|-----|
 |pageChange|切换分页|
