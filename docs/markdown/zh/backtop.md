@@ -1,8 +1,6 @@
 [[toc]]
 
-## BackTop 返回顶部 有 bug 
-- icon图标没有
-- 由于是fixed相对于窗口定位，展示效果较差
+## BackTop 返回顶部
 
 > 非 template/render 模式下，请使用 blue-backtop。
 

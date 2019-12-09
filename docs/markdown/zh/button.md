@@ -401,7 +401,7 @@
 | color                     | 颜色                                | String        | pramery, yellow, green, red, blue, gray | -                |
 | loading                   | 是否加载中状态                     | Boolean       | -                  | -                |
 | circle                     | 是否圆角按钮                       | Boolean       | -                 | -                |
-| block                      | 是否为长条状                       | Boolean      | -                 | -                 |
+| block                      | 是否为整行按钮                     | Boolean      | -                 | -                 |
 | noBorder                  | 是否拥有边框                       | Boolean      | -                 | -                 |
 | disabled                   | 是否禁用状态                       | Boolean      | -                 | false             |
 | text                       | 是否为文字按钮                     | Boolean      | -                 | -                |

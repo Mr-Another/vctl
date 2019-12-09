@@ -220,18 +220,18 @@
 | 参数          | 说明                                 | 类型         | 可选值 | 默认值                     |
 | ------------- | ------------------------------------ | ------------ | ------ | -------------------------- |
 | datas         | 数据字典                             | Array,Object | -      | -                          |
-| dict          | 调用配置好的字典库，详情请至全局配置 | String       |        |
+| dict          | 调用配置好的字典库，详情请至全局配置   | String       |        |
 | disabled      | 是否禁用                             | Boolean      | -      | false                      |
-| checked       | 是否选中，针对 true,false 的多选框   | Boolean      | -      | false                      |
-| indeterminate | 不明确的，针对 true,false 的多选框   | Boolean      | -      | false                      |
-| keyName       | 自定义数据的 key 字段名              | String       | -      | 全局 config dict.keyName   |
-| titleName     | 自定义数据的 title 字段名            | String       | -      | 全局 config dict.titleName |
+| checked       | 是否选中，针对 true,false 的多选框    | Boolean      | -      | false                      |
+| indeterminate | 不明确的，针对 true,false 的多选框    | Boolean      | -      | false                      |
+| keyName       | 自定义数据的 key 字段名               | String       | -      | 全局 config dict.keyName   |
+| titleName     | 自定义数据的 title 字段名             | String       | -      | 全局 config dict.titleName |
 
 ### Radio 事件
 
 | 事件   | 说明                     | 返回数据 |
 | ------ | ------------------------ | -------- |
-| change | 当数据产生变动的时候触发 | 完整对象 |
+| change | 当数据产生变动的时候触发   | 完整对象 |
 
 <script>
 

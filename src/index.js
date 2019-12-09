@@ -7,91 +7,91 @@
  *
  */
 import Affix from "@/src/components/affix";
+import AutoComplete from "@/src/components/auto-complete";
 import Avatar from "@/src/components/avatar";
 import BackTop from "@/src/components/back-top";
 import Badge from "@/src/components/badge";
 import Breadcrumb from "@/src/components/breadcrumb";
-import Checkbox from "@/src/components/checkbox";
-import Circle from "@/src/components/circle";
+import Button from "@/src/components/button";
+import ButtonGroup from "@/src/components/button-group";
+import Carousel from "@/src/components/carousel";
 import Category from "@/src/components/category";
 import CategoryPicker from "@/src/components/category-picker";
+import Cell from "@/src/components/cell";
+import Checkbox from "@/src/components/checkbox";
+import Circle from "@/src/components/circle";
+import Collapse from "@/src/components/collapse";
+import CollapseItem from "@/src/components/collapse-item";
+import Content from "@/src/components/content";
+import DateFullRangePicker from "@/src/components/date-full-range-picker";
 import DatePicker from "@/src/components/date-picker";
 import DateRangePicker from "@/src/components/date-range-picker";
-import DateFullRangePicker from "@/src/components/date-full-range-picker";
 import DropdownCustom from "@/src/components/dropdown-custom";
 import DropdownMenu from "@/src/components/dropdown-menu";
-import ImagePreview from "@/src/components/image-preview";
 import Form from "@/src/components/form";
 import FormItem from "@/src/components/form-item";
 import FormItemList from "@/src/components/form-item-list";
+import HFooter from "@/src/components/h-footer";
+import HHeader from "@/src/components/h-header";
+import fixSwitch from "@/src/components/h-switch";
+import ImagePreview from "@/src/components/image-preview";
+import Layout from "@/src/components/layout";
+import Loading from "@/src/components/loading";
 import Menu from "@/src/components/menu";
 import Modal from "@/src/components/modal";
 import ModalComponent from "@/src/components/modal-component";
+import NumberInput from "@/src/components/number-input";
 import Pagination from "@/src/components/pagination";
 import Poptip from "@/src/components/poptip";
 import Progress from "@/src/components/progress";
 import Radio from "@/src/components/radio";
 import Rate from "@/src/components/rate";
-import Slider from "@/src/components/slider";
-import Loading from "@/src/components/loading";
-import Steps from "@/src/components/steps";
+import Row from "@/src/components/row";
 import Search from "@/src/components/search";
 import Select from "@/src/components/select";
-import fixSwitch from "@/src/components/h-switch";
-import SwitchList from "@/src/components/switch-list";
+import Sider from "@/src/components/sider";
 import Skeleton from "@/src/components/skeleton";
+import Slider from "@/src/components/slider";
+import Steps from "@/src/components/steps";
+import SwitchList from "@/src/components/switch-list";
 import Table from "@/src/components/table";
 import TableItem from "@/src/components/table-item";
 import Tabs from "@/src/components/tabs";
 import TagInput from "@/src/components/tag-input";
-import Tree from "@/src/components/tree";
-import TreePicker from "@/src/components/tree-picker";
-import NumberInput from "@/src/components/number-input";
-import Tooltip from "@/src/components/tooltip";
-import Uploader from "@/src/components/uploader";
-import AutoComplete from "@/src/components/auto-complete";
-import Row from "@/src/components/row";
-import Cell from "@/src/components/cell";
-import HHeader from "@/src/components/h-header";
-import HFooter from "@/src/components/h-footer";
-import Content from "@/src/components/content";
-import Sider from "@/src/components/sider";
-import Layout from "@/src/components/layout";
+import TextEllipsis from "@/src/components/text-ellipsis";
 import Timeline from "@/src/components/timeline";
 import TimelineItem from "@/src/components/timeline-item";
+import Tooltip from "@/src/components/tooltip";
 import Transfer from "@/src/components/transfer";
-import Button from "@/src/components/button";
-import ButtonGroup from "@/src/components/button-group";
-import TextEllipsis from "@/src/components/text-ellipsis";
-import Carousel from "@/src/components/carousel";
-import Collapse from "@/src/components/collapse";
-import CollapseItem from "@/src/components/collapse-item";
-import Systab from "@/src/components/systab";
-
+import Tree from "@/src/components/tree";
+import TreePicker from "@/src/components/tree-picker";
+import Uploader from "@/src/components/uploader";
+import autosize from "@/src/directives/autosize";
 import style from "@/src/directives/style";
 import tooltip from "@/src/directives/tooltip";
 import wordcount from "@/src/directives/wordcount";
 import wordlimit from "@/src/directives/wordlimit";
-import autosize from "@/src/directives/autosize";
-
-import $Modal from "@/src/plugins/modal";
-import $Confirm from "@/src/plugins/confirm";
-import $Message from "@/src/plugins/message";
-import $Notice from "@/src/plugins/notice";
-import $Loading from "@/src/plugins/loading";
-import $LoadingBar from "@/src/plugins/loading-bar";
-import $ScrollIntoView from "@/src/plugins/scroll-into-view";
-import $Clipboard from "@/src/plugins/clipboard";
-import $ImagePreview from "@/src/plugins/image-preview";
-import $Dropdown from "@/src/plugins/dropdown";
-import $mm from "@/src/plugins/mm";
-import $nzh from "@/src/plugins/nzh";
-
 import dictMapping from "@/src/filters/dictmapping";
 import hlang from "@/src/filters/hlang";
-
-import config from "@/src/utils/config";
 import locale from "@/src/locale";
+import $Clipboard from "@/src/plugins/clipboard";
+import $Confirm from "@/src/plugins/confirm";
+import $Dropdown from "@/src/plugins/dropdown";
+import $ImagePreview from "@/src/plugins/image-preview";
+import $Loading from "@/src/plugins/loading";
+import $LoadingBar from "@/src/plugins/loading-bar";
+import $Message from "@/src/plugins/message";
+import $mm from "@/src/plugins/mm";
+import $Modal from "@/src/plugins/modal";
+import $Notice from "@/src/plugins/notice";
+import $nzh from "@/src/plugins/nzh";
+import $ScrollIntoView from "@/src/plugins/scroll-into-view";
+import config from "@/src/utils/config";
+
+
+
+
+
 
 const Col = Cell;
 
@@ -142,7 +142,6 @@ const components = {
   Loading,
   TagInput,
   Table,
-  Systab,
   TableItem,
   Tabs,
   Tooltip,

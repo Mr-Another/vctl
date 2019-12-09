@@ -214,12 +214,12 @@
 
 ### Radio 参数
 
-| 参数      | 说明                                 | 类型         | 可选值 | 默认值                     |
-| --------- | ------------------------------------ | ------------ | ------ | -------------------------- |
-| datas     | 数据字典                             | Array,Object | -      | -                          |
-| dict      | 调用配置好的字典库，详情请至全局配置 | String       |        |
+| 参数      | 说明                                 | 类型         | 可选值     | 默认值                 |
+| --------- | -------------------------- | ------------ | ------ | ------------------ |
+| datas     | 数据字典                             | Array,Object | -       | -                          |
+| dict      | 调用配置好的字典库，详情请至全局配置 | String       | -       | -                           |
 | disabled  | 是否禁用                             | Boolean      | -      | false                      |
-| value     | 单个选择模式                         |              | -      |
+| value     | 单个选择模式                         | Object, String, Boolean, Number | -      |
 | keyName   | 自定义数据的 key 字段名              | String       | -      | 全局 config dict.keyName   |
 | titleName | 自定义数据的 title 字段名            | String       | -      | 全局 config dict.titleName |
 
