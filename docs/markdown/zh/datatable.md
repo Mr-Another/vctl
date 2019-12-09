@@ -223,7 +223,7 @@
 
 ### DataTable 参数
 | 参数              | 说明                  | 类型    | 可选值 | 默认值   |
-| ----------------- | -------------------- | ------- | ------ | -------- |
+| -------------     | -------------------- | ------- | ------ | -------- |
 | actions | 定义 DataTable 的按钮  | Array   | - | [] |
 | tabledatas   | 列表展示需要的数据  | Array   | -      | []       |
 | tablecolumns   | 定义列表表头（详见table组件TableItem / Column 参数）  | Array   | -      | []       |
@@ -299,9 +299,9 @@
                     { title: "选择", type: "select", name: "select", datas: ["a", "b"] }
                 ],
                 advfilters: [
-                    { title: "姓名", type: "text", name: "add" },
-                    { title: "部门", type: "text", name: "add" },
-                    { title: "用户名", type: "text", name: "add" }
+                    { title: "I D", type: "text", name: "add" },
+                    { title: "年龄", type: "text", name: "add" },
+                    { title: "地址", type: "text", name: "add" }
                 ],
                 pagination: {
                     total: 11,
