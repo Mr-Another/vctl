@@ -203,7 +203,7 @@ max-768px, 768px, 992px,1200px , min-1800px
 | flex  | flex 模式下的 flex 值          | number | -       | -      |
 | xs    | 自适应模式下大屏幕的显示比例   | number | -       | -      |
 | sm    | 自适应模式下中大屏幕的显示比例 | number | -       | -      |
-| md    | 自适应模式下中小屏幕的显示比例 | number | -       | r-w    |
+| md    | 自适应模式下中小屏幕的显示比例 | number | -       | -    |
 | lg    | 自适应模式下小屏幕的显示比例   | number | -       | -      |
 
 <style type="text/css" lang="less" scoped>

@@ -24,11 +24,10 @@
       </blue-button>
     </p>
     <p>
-      <Tooltip :content="content" :disabled="!enable"
-        ><blue-button class="text-hover" @click="content+='1'">
+      <Tooltip :content="content" :disabled="!enable">
+        <blue-button class="text-hover" @click="content+='1'">
           Component调用，点我
-        </blue-button></Tooltip
-      >
+        </blue-button></Tooltip>
     </p>
   </div>
 </template>
@@ -55,105 +54,105 @@
 <template>
   <div class="tooltip2-demo">
     <Row :space="10" v-width="300" style="margin-left:80px;">
-      <Cell :width="8"
-        ><blue-button
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top-start"
           content="提示语"
         >
           上左
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top"
           content="提示语"
         >
           上中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top-end"
           content="提示语"
         >
           上右
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left-start"
           content="提示语"
         >
           左上
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right-start"
           content="提示语"
         >
           右上
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left"
           content="提示语"
         >
           左中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right"
           content="提示语"
         >
           右中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left-end"
           content="提示语"
         >
           左下
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right-end"
           content="提示语"
         >
           右下
-        </blue-button></Cell
-      >
+        </blue-button>
+      </Cell>
       <Cell :width="8"
         ><blue-button
           class="blue-btn"
@@ -164,26 +163,26 @@
           下左
         </blue-button></Cell
       >
-      <Cell :width="8"
-        ><blue-button
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="bottom"
           content="提示语"
         >
           下中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="bottom-end"
           content="提示语"
         >
           下右
-        </blue-button></Cell
-      >
+        </blue-button>
+      </Cell>
     </Row>
   </div>
 </template>
@@ -300,10 +299,10 @@
 | 参数      | 说明                    | 类型    | 可选值                | 默认值                                                                                                               |
 | --------- | ----------------------- | ------- | --------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | content   | 显示的内容              | String  | -                     | -                                                                                                                    |
-| placement | 提示的方向              | String  | -                     | top, top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start, right-end |
+| placement | 提示的方向              | String  | top, top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start, right-end | top |
 | theme     | 主题                    | String  | white，或者自定义参数 | -                                                                                                                    |
 | className | tooltip 框添加样式      | String  | -                     | -                                                                                                                    |
-| trigger   | 触发事件                | String  | hover, click, focus   | info                                                                                                                 |
+| trigger   | 触发事件                | String  | hover, click, focus   | hover                                                                                                                 |
 | disabled  | 是否禁用                | Boolean |                       | false                                                                                                                |
 | editable  | 是否为编辑模块, 1.18.0+ | Boolean |                       | false                                                                                                                |
 
