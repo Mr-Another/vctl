@@ -79,6 +79,8 @@ zh:
               name: Table
             - title: 分页
               name: Pagination
+            - title: 数据表格
+              name: DataTable
             - title: 搜索框
               name: Search
             - title: 树

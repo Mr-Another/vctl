@@ -156,7 +156,7 @@
     <div v-if="fixedColumnLeft.length" class="blue-table-fixed-header-left">
       <table :style="{width: leftWidth + 'px'}">
         <colgroup>
-          <col v-if="checkbox" width="60">
+          <col v-if="checkbox" width="20">
           <col
             v-for="(c, index) of fixedColumnLeft"
             :width="getWidth(c)"
