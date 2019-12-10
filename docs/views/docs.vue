@@ -3,7 +3,6 @@
     <m-header></m-header>
 
     <sidebar :data="navs"></sidebar>
-    <!-- <blue-systab homePage="Home"></blue-systab> -->
     <div class="blue-markdown">
       <keep-alive>
         <router-view v-if="$route.meta.keepAlive"></router-view>

@@ -121,8 +121,6 @@ zh:
               name: DropdownMenu
             - title: 下拉定制框
               name: DropDownCustom
-            - title: 系统总标签
-              name: systab
         - title: 其他
           items:
             - title: 加载中

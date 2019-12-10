@@ -4,7 +4,6 @@
   <div class="wrapper">
     <m-header></m-header>
     <sidebar :data="navs"></sidebar>
-    <blue-systab homePage="Home" :left="220"></blue-systab>
 
     <div class="blue-markdown">
       <keep-alive>
