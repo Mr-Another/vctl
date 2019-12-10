@@ -47,8 +47,12 @@
         </transition>
       </div>
       <div class="blue-carousel-arrow" :class="arrowCls">
-        <div class="icon-left" @click="prev"></div>
-        <div class="icon-right" @click="next"></div>
+        <div class="blue-icon-left" @click="prev">
+          <i class="icon-left"></i>
+        </div>
+        <div class="blue-icon-right" @click="next">
+          <i class="icon-right"></i>
+        </div>
       </div>
     </div>
     <ul class="blue-carousel-pagination" :class="paginationCls">

@@ -153,10 +153,11 @@
 
 | 参数     | 说明                   | 类型                         | 可选值 | 默认值               |
 | -------- | ---------------------- | ---------------------------- | ------ | -------------------- |
-| step     | 每个节点大小           | Number                       | -      | -                    |
+| step     | 步幅的大小           | Number                       | -      | -                    |
 | readonly | 只读，只用于展示       | Boolean                      | -      | false                |
 | show     | 自定义 tip 展示的内容  | Function                     | -      | -                    |
 | showtip  | 是否展示 tip           | Boolean                      | -      | true                 |
+| multiple  | 是否有多个节点        | Boolean                      | -      | false |
 | range    | 设置 slider 的数值范围 | {start: Number, end: Number} | -      | {start: 0, end: 100} |
 
 ### Silder 事件

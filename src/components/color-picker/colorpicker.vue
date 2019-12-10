@@ -1,11 +1,11 @@
 <template>
-  <div class='blue-colorpicker">
-    <div class='blue-colorpicker-show">
-      <div class='blue-colorpicker-color-bg"></div>
-      <div class='blue-colorpicker-color-show"></div>
+  <div class="blue-colorpicker">
+    <div class="blue-colorpicker-show">
+      <div class="blue-colorpicker-color-bg"></div>
+      <div class="blue-colorpicker-color-show"></div>
       <i class="icon-down"></i>
     </div>
-    <div class='blue-colorpicker-group">
+    <div class="blue-colorpicker-group">
       1
     </div>
   </div>

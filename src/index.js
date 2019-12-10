@@ -191,7 +191,7 @@ const prototypes = {
 
 const filters = { dictMapping, hlang };
 
-const install = function(Vue, opts = {}) {
+const install = function (Vue, opts = {}) {
   if (install.installed) return;
   if (opts.locale) {
     locale.use(opts.locale);
@@ -241,7 +241,7 @@ BlueUI.install = install;
 
 // console.log(
 //   ` %c
-  
+
 // ██████╗ ██╗     ██╗   ██╗███████╗██╗   ██╗██╗
 // ██╔══██╗██║     ██║   ██║██╔════╝██║   ██║██║
 // ██████╔╝██║     ██║   ██║█████╗  ██║   ██║██║

@@ -66,7 +66,7 @@
         </template>
       </blue-tableitem>
       <div slot="empty">自定义提醒：暂时无数据</div>
-    </Table>
+    </blue-table>
   </div>
 </template>
 

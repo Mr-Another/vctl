@@ -144,9 +144,10 @@
 | --------------- | ---------------------------------- | ------- | ------ | ------------------------------- |
 | datas           | menu 的数据                        | Array   | -      | []                              |
 | option          | 配置项，详细参见下面的 option 说明 | Object  | -      | 全局配置 config.menu            |
-| className       | 自定义 class                       | string  | -      | blue-menu-dark, blue-menu-white |
-| inlineCollapsed | 是否使用折叠模式，兼容：1.13.1+    | Boolean | -      | false                           |
+| className      | 自定义 class                       | string  | blue-menu-dark, blue-menu-white | blue-menu-dark |
+| inlineCollapsed  | 是否使用折叠模式，兼容：1.13.1+    | Boolean | -      | false                           |
 | accordion       | 是否启动手风琴模式，兼容：1.12.0+  | Boolean | -      | false                           |
+| mode           | 模式  | String | normal, vertical | normal                           |
 
 ### Menu 事件
 

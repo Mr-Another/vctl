@@ -1,4 +1,5 @@
-## Button 按钮
+## Button 按钮 有bug
+- 文字按钮的边框显示不出来
 
 ### 组件调用
 
@@ -391,6 +392,25 @@
 ```
 
 :::
+
+### Button 参数
+
+| 参数                     | 说明                               | 类型          | 可选值              | 默认值           |
+| ------------------- | --------------------------- | ---------- | --------------- | ------------- |
+| size                      | 尺寸                               | String        | l, s, xs            | -                |
+| color                     | 颜色                                | String        | pramery, yellow, green, red, blue, gray | -                |
+| loading                   | 是否加载中状态                     | Boolean       | -                  | -                |
+| circle                     | 是否圆角按钮                       | Boolean       | -                 | -                |
+| block                      | 是否为整行按钮                     | Boolean      | -                 | -                 |
+| noBorder                  | 是否拥有边框                       | Boolean      | -                 | -                 |
+| disabled                   | 是否禁用状态                       | Boolean      | -                 | false             |
+| text                       | 是否为文字按钮                     | Boolean      | -                 | -                |
+| textColor                  | 文字按钮颜色                       | String       | pramery, yellow, green, red, blue, gray | -                |
+| icon                        | 图标类名                           | String       | -                 | false             |
+| iconCircle                  | 是否圆形按钮                       | Boolean      | -                 | -                |
+| transparent                | 是否为半圆角按钮                   | Boolean      | -                 | false            |
+
+
 
 <style lang="less">
     h4{
