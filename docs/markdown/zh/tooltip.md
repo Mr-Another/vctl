@@ -296,8 +296,9 @@
 
 ### Tooltip 参数
 
-| 参数      | 说明                    | 类型    | 可选值                | 默认值                                                                                                               |
+| 参数      | 说明                    | 类型    | 默认值               |   可选值                                                                                                              |
 | --------- | ----------------------- | ------- | --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+<<<<<<< HEAD
 | content   | 显示的内容              | String  | -                     | -                                                                                                                    |
 | placement | 提示的方向              | String  | top, top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start, right-end | top |
 | theme     | 主题                    | String  | white，或者自定义参数 | -                                                                                                                    |
@@ -306,6 +307,16 @@
 | disabled  | 是否禁用                | Boolean |                       | false                                                                                                                |
 | editable  | 是否为编辑模块, 1.18.0+ | Boolean |                       | false                                                                                                                |
 
+=======
+| content   | 显示的内容              | String  | -                     | -  |
+| placement | 提示的方向              | String  | -| top, top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start,right-end |
+| theme     | 主题                    | String  | white，或者自定义参数 | -                                                                                                                    |
+| className | tooltip 框添加样式      | String  | -                     | -                                                                                                                    |
+| trigger   | 触发事件                | String  | hover  |  hover, click, focus                                                                                                                 |
+| disabled  | 是否禁用                | Boolean | false                      | true,false                                                                                                                |
+| editable  | 是否为编辑模块, 1.18.0+ | Boolean | false                     | true,false                                                                                                                |
+| delay     | 延迟                   | Number |  0                    |  -                                                                                                                |
+>>>>>>> 0cba681ba1b865a36f4f64a8345d1782eee51328
 ### Tooltip 事件
 
 | 参数 | 说明                   | 参数 |
@@ -320,6 +331,7 @@
 | show   | 显示             |
 | hide   | 关闭显示         |
 | update | 更新提示框的位置 |
+| init   | 初始化          |
 
 <script>
   export default {

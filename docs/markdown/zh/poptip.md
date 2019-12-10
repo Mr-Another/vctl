@@ -33,17 +33,19 @@
 
 ### Poptip 参数
 
-| 参数      | 说明       | 类型   | 可选值 | 默认值                                                                                                               |
+| 参数      | 说明       | 类型   | 默认值 |  可选值                                                                                                              |
 | --------- | ---------- | ------ | ------ | -------------------------------------------------------------------------------------------------------------------- |
 | content   | 显示的内容 | String | -      | -                                                                                                                    |
-| placement | 提示的方向 | String | -      | top, top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start, right-end |
-| theme     | 主题       | String | white  | -                                                                                                                    |
+| placement | 提示的方向 | String | top    | top,top-start, top-end, bottom, bottom-start, bottom-end, left, left-start, left-end, right, right-start, right-end   |
+| theme     | 主题       | String |white  | -                                                                                                                  |
 
 ### Poptip 事件
 
 | 参数    | 说明               |
 | ------- | ------------------ |
 | confirm | 点击“确认”触发事件 |
+| cancel | 点击“取消”触发事件 |
+
 
 <script>
   export default {

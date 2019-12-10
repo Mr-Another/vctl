@@ -9,9 +9,9 @@ let Default = {
 };
 
 const iconNames = {
-  info: "info",
-  success: "success",
-  warn: "warn",
+  info: "message",
+  success: "check-circle",
+  warn: "warning-circle",
   error: "error",
   loading: "loading"
 };

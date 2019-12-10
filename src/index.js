@@ -23,6 +23,7 @@ import Circle from "@/src/components/circle";
 import Collapse from "@/src/components/collapse";
 import CollapseItem from "@/src/components/collapse-item";
 import Content from "@/src/components/content";
+import DataTable from "@/src/components/data-table";
 import DateFullRangePicker from "@/src/components/date-full-range-picker";
 import DatePicker from "@/src/components/date-picker";
 import DateRangePicker from "@/src/components/date-range-picker";
@@ -93,6 +94,12 @@ import config from "@/src/utils/config";
 
 
 
+
+
+
+
+
+
 const Col = Cell;
 
 const components = {
@@ -156,7 +163,8 @@ const components = {
   HFooter,
   Content,
   Sider,
-  Layout
+  Layout,
+  DataTable
 };
 
 const directives = {
@@ -190,7 +198,7 @@ const prototypes = {
 
 const filters = { dictMapping, hlang };
 
-const install = function(Vue, opts = {}) {
+const install = function (Vue, opts = {}) {
   if (install.installed) return;
   if (opts.locale) {
     locale.use(opts.locale);
@@ -238,19 +246,19 @@ const BlueUI = Object.assign(
 
 BlueUI.install = install;
 
-console.log(
-  ` %c
-  
-██████╗ ██╗     ██╗   ██╗███████╗██╗   ██╗██╗
-██╔══██╗██║     ██║   ██║██╔════╝██║   ██║██║
-██████╔╝██║     ██║   ██║█████╗  ██║   ██║██║
-██╔══██╗██║     ██║   ██║██╔══╝  ██║   ██║██║
-██████╔╝███████╗╚██████╔╝███████╗╚██████╔╝██║
-╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝
+// console.log(
+//   ` %c
 
-                       一个基于Vue.js的UI组件库
-`,
-  "color: #3074af"
-);
+// ██████╗ ██╗     ██╗   ██╗███████╗██╗   ██╗██╗
+// ██╔══██╗██║     ██║   ██║██╔════╝██║   ██║██║
+// ██████╔╝██║     ██║   ██║█████╗  ██║   ██║██║
+// ██╔══██╗██║     ██║   ██║██╔══╝  ██║   ██║██║
+// ██████╔╝███████╗╚██████╔╝███████╗╚██████╔╝██║
+// ╚═════╝ ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝
+
+//                        一个基于Vue.js的UI组件库
+// `,
+//   "color: #3074af"
+// );
 
 export default BlueUI;

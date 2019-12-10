@@ -10,9 +10,9 @@ let Default = {
 };
 
 const iconNames = {
-  info: "info",
-  success: "success",
-  warn: "warn",
+  info: "message",
+  success: "check-circle",
+  warn: "warning-circle",
   error: "error"
 };
 const iconColor = {
@@ -38,9 +38,8 @@ function Notice(originalParam) {
   };
   if (new Set(Object.keys(iconNames)).has(originalParam.type)) {
     if (originalParam.title) originalParam.style = `${prefixCls}-has-icon`;
-    originalParam.content = `<i class="${iconPrefixCls}-${
-      iconNames[originalParam.type]
-    } ${iconColor[originalParam.type]}-color"></i>${originalParam.content}`;
+    originalParam.content = `<i class="${iconPrefixCls}-${iconNames[originalParam.type]}
+     ${iconColor[originalParam.type]}-color"></i>${originalParam.content}`;
     delete originalParam.type;
   } else if (originalParam.icon) {
     if (originalParam.title) originalParam.style = `${prefixCls}-has-icon`;
