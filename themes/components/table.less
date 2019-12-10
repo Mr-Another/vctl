@@ -4,6 +4,7 @@
 .@{table-prefix} {
   border: @border;
   position: relative;
+
   th {
     white-space: nowrap;
     overflow: hidden;
@@ -11,6 +12,7 @@
     height: 40px;
     position: relative;
   }
+
   th,
   td {
     overflow: hidden;
@@ -21,42 +23,51 @@
     min-width: 0;
     padding: 3px 0px 3px 8px;
     vertical-align: middle;
+
     &.text-right {
       padding-right: 8px;
       padding-left: 0;
     }
   }
+
   th&-th-checkbox,
   td&-td-checkbox {
     text-align: center;
     text-overflow: clip;
   }
+
   td {
     font-size: @font-size-mini;
     height: 40px;
     border-top: @border;
   }
+
   table {
     table-layout: fixed;
     border-spacing: 0;
   }
+
   &-header {
     background-color: @gray4-color;
     position: relative;
     overflow: hidden;
+
     table {
       width: 100%;
     }
+
     border-bottom: @border;
   }
 
   &-body {
     overflow: auto;
   }
+
   &-container {
     position: relative;
     margin-top: -1px;
     background: #fff;
+
     table {
       width: 100%;
     }
@@ -69,6 +80,7 @@
     top: 0;
     bottom: 0;
     overflow: hidden;
+
     table {
       background: @white-color;
     }
@@ -77,15 +89,18 @@
   &-fixed-right table {
     float: right;
   }
+
   &-fixed-header-right,
   &-fixed-header-left {
     z-index: 1;
     position: absolute;
     top: 0;
     overflow: hidden;
+
     table {
       background: @gray4-color;
     }
+
     border-bottom: @border;
   }
 
@@ -112,16 +127,24 @@
 
   &-border {
     border-left: 0;
+
     td,
     th {
       border-left: @border;
     }
+
     th {
       border-bottom: @border;
     }
+
+    .blue-table-header {
+      overflow: visible;
+    }
+
     .blue-table-header table {
       margin-bottom: -1px;
     }
+
     .blue-table-content-empty {
       border-left: @border;
       border-top: @border;
@@ -130,6 +153,7 @@
 
   &-border &-fixed-right,
   &-border &-fixed-header-right {
+
     td,
     th {
       border-right: none;
@@ -150,6 +174,7 @@
         background-color: transparent;
       }
     }
+
     &.blue-table-tr-selected {
       background-color: @highlight-background-color;
     }
@@ -161,6 +186,7 @@
     box-sizing: border-box;
     padding: 20px;
   }
+
   &-sort-handler {
     display: inline-block;
     line-height: 1;
@@ -168,14 +194,13 @@
     font-size: 12px;
     color: @gray1-color;
     transition: color @transition-time;
+
     th:hover & {
       color: @gray-color;
     }
-    > span {
+
+    >span {
       cursor: pointer;
-      // &:hover {
-      //   color: @dark-color;
-      // }
       &.@{table-prefix}-sort-selected {
         color: @primary-color;
       }
@@ -188,5 +213,53 @@
 
   &-tr-select-disabled {
     background: @disabled-background-color;
+  }
+
+  .blue-select-thead {
+    overflow: visible !important;
+
+    .blue-select-th {
+      width: 100%;
+      position: relative;
+
+      .fade-enter-active,
+      .fade-leave-active {
+        transition: opacity .3s;
+      }
+
+      .fade-enter,
+      .fade-leave-to {
+        opacity: 0;
+      }
+
+      .blue-select-th-check {
+        position: absolute;
+        top: 100%;
+        z-index: 999;
+        border: @border;
+        border-radius: 4px;
+        background-color: #fff;
+        box-shadow: @box-shadow;
+        box-sizing: border-box;
+        margin: 2px 0;
+        transform: translate(-100%, 0);
+        padding: 10px 20px;
+
+        label {
+          display: block !important;
+          margin-right: 0 !important;
+          word-break: keep-all;
+          white-space: nowrap;
+        }
+
+        .blue-select-th-check-btn{
+          padding-top: 8px;
+          .blue-btn.blue-btn-text {
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+    }
   }
 }
