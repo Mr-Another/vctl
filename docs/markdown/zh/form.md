@@ -482,7 +482,7 @@ export default {
 | 参数          | 说明                                                        | 类型    | 可选值                  | 默认值 |
 | ------------- | ----------------------------------------------------------- | ------- | ----------------------- | ------ |
 | mode          | 排版模式                                                    | String  | inline,single,twocolumn | single |
-| model         | 关联的 model 模型，用于数据 validator。详情至 hey-validator | Object  |                         |        |
+| model         | 关联的 model 模型，用于数据 validator。详情至 hey-validator | Object  | -                       | -       |
 | labelWidth    | 说明文字的宽度                                              | Number  | -                       | 80     |
 | readonly      | 只读的表单                                                  | Boolean | -                       | false  |
 | rules         | 数据 validator 规则。详情至 hey-validator                   | Object  |                         |        |
