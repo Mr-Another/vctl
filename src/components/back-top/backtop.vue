@@ -1,7 +1,7 @@
 <template>
   <div :class="backtopCls" :style="backtopStyle">
     <div class="blue-backtop-inner" @click="backtop">
-      <i class="icon-top" v-if="!$slots.default"></i>
+      <i class="icon-totop" v-if="!$slots.default"></i>
       <slot v-else></slot>
     </div>
   </div>

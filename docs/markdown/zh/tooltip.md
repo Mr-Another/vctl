@@ -24,11 +24,10 @@
       </blue-button>
     </p>
     <p>
-      <Tooltip :content="content" :disabled="!enable"
-        ><blue-button class="text-hover" @click="content+='1'">
+      <Tooltip :content="content" :disabled="!enable">
+        <blue-button class="text-hover" @click="content+='1'">
           Component调用，点我
-        </blue-button></Tooltip
-      >
+        </blue-button></Tooltip>
     </p>
   </div>
 </template>
@@ -55,105 +54,105 @@
 <template>
   <div class="tooltip2-demo">
     <Row :space="10" v-width="300" style="margin-left:80px;">
-      <Cell :width="8"
-        ><blue-button
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top-start"
           content="提示语"
         >
           上左
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top"
           content="提示语"
         >
           上中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="top-end"
           content="提示语"
         >
           上右
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left-start"
           content="提示语"
         >
           左上
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right-start"
           content="提示语"
         >
           右上
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left"
           content="提示语"
         >
           左中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right"
           content="提示语"
         >
           右中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="left-end"
           content="提示语"
         >
           左下
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button class="blue-btn blue-btn-text">中间</blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button class="blue-btn blue-btn-text">中间</blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="right-end"
           content="提示语"
         >
           右下
-        </blue-button></Cell
-      >
+        </blue-button>
+      </Cell>
       <Cell :width="8"
         ><blue-button
           class="blue-btn"
@@ -164,26 +163,26 @@
           下左
         </blue-button></Cell
       >
-      <Cell :width="8"
-        ><blue-button
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="bottom"
           content="提示语"
         >
           下中
-        </blue-button></Cell
-      >
-      <Cell :width="8"
-        ><blue-button
+        </blue-button>
+      </Cell>
+      <Cell :width="8">
+        <blue-button
           class="blue-btn"
           v-tooltip
           placement="bottom-end"
           content="提示语"
         >
           下右
-        </blue-button></Cell
-      >
+        </blue-button>
+      </Cell>
     </Row>
   </div>
 </template>

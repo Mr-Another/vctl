@@ -12,6 +12,10 @@ export default {
   name: 'blueButtonGroup',
   props: {
     circle: Boolean,
+    disabled: {
+      type: Boolean,
+      default: false
+    },
     size: {
       type: String,
       validator(value) {
@@ -20,7 +24,7 @@ export default {
     }
   },
   data() {
-    return {};
+    return {}; 
   },
   computed: {
     buttonGroupCls() {

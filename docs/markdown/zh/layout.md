@@ -85,21 +85,21 @@
 
 | 参数           | 说明           | 类型    | 可选值 | 默认值 |
 | -------------- | -------------- | ------- | ------ | ------ |
-| headerFixed    | 是否固定头部   | Boolean | false  | -      |
-| siderFixed     | 是否固定侧边栏 | Boolean | false  | -      |
-| siderCollapsed | 是否收起侧边栏 | Boolean | false  | -      |
+| headerFixed    | 是否固定头部   | Boolean | -  | false     |
+| siderFixed     | 是否固定侧边栏 | Boolean | - | false      |
+| siderCollapsed | 是否收起侧边栏 | Boolean | - | false      |
 
 ### Header 参数
 
 | 参数  | 说明 | 类型   | 可选值 | 默认值      |
 | ----- | ---- | ------ | ------ | ----------- |
-| theme | 主题 | String |        | white, dark |
+| theme | 主题 | String | white, dark | -  |
 
 ### Sider 参数
 
 | 参数  | 说明 | 类型   | 可选值 | 默认值      |
 | ----- | ---- | ------ | ------ | ----------- |
-| theme | 主题 | String |        | white, dark |
+| theme | 主题 | String | white, dark | -            |
 
 <script>
 export default {
