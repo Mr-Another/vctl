@@ -1,18 +1,18 @@
 <template>
 	<th
-		:class="[cls,type=='select'? 'blue-select-thead': '']"
+		:class="[cls,filter? 'blue-select-thead': '']"
 		@click="triggerSort()"
 		:rowspan="rowspan"
 		:colspan="colspan"
 	>
-		<div class="blue-select-th" v-if="type=='select'">
-			<div class="blue-select-th-title" @click="ifshowcheck">
-				标签
+		<div class="blue-select-th" v-if="filter">
+			<div ref="labelSelect" class="blue-select-th-title" @click="ifshowcheck">
+				<span>{{title}}</span>
 				<i class="icon-down"></i>
 			</div>
 			<transition name="fade">
 				<div ref="labelcheck" class="blue-select-th-check" v-show="showcheck">
-					<Checkbox v-model="checkval" :datas="selects">
+					<Checkbox v-model="checkval" :datas="filterKey">
 						<template slot="item" slot-scope="{item}">
 							<span>{{item.key}}</span>
 						</template>
@@ -57,6 +57,7 @@ import utils from '@/src/utils/utils'
 import Checkbox from '@/src/components/checkbox'
 import blueSelect from '@/src/components/select/select'
 import { type } from 'os'
+import colors from '../../../themes/var'
 export default {
 	name: 'blueTableTh',
 	props: {
@@ -87,8 +88,11 @@ export default {
 		},
 		placement: String,
 		content: String,
-		type: String,
-		selects: {
+		filter: {
+			type: Boolean,
+			default: false
+		},
+		filterKey: {
 			type: Array,
 			default: () => []
 		}
@@ -125,18 +129,11 @@ export default {
 		},
 		selectReset() {
 			this.checkval = null
+			this.$emit('transformData', this.checkval)
 			this.showcheck = false
-			this.$emit('transformData', {
-				key: this.prop,
-				val: this.checkval
-			})
 		},
 		choose() {
-			console.log(this.prop)
-			this.$emit('transformData', {
-				key: this.prop,
-				val: this.checkval
-			})
+			this.$emit('transformData', this.checkval)
 			this.showcheck = false
 		}
 	},
@@ -170,10 +167,13 @@ export default {
 			return this.sortProp || this.prop
 		}
 	},
-	mounted() {
-		if (this.type == 'select') {
-			console.log(this.$refs.labelcheck.style)
-			this.$refs.labelcheck.style.left = 50 + '%'
+	watch: {
+		checkval(n) {
+			if (n && n.length != 0) {
+				this.$refs.labelSelect.style.color = colors['primary-color']
+			} else {
+				this.$refs.labelSelect.style.color = ''
+			}
 		}
 	}
 }

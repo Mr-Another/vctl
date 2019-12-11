@@ -227,6 +227,50 @@ Table 组件内置了一系列的数据渲染模式。
 
 :::
 
+### 筛选
+
+:::demo
+
+```html
+<template>
+  <div>
+    <blue-table
+      :datas="tabledatas"
+      :columns="tablecolumns"
+    >
+    </blue-table>
+  </div>
+</template>
+<script>
+  export default{
+    data(){
+      return {
+        tabledatas: [
+            { index: 1, id: "abc1", name: "测试1", age: 1, address: "上海1", address2: "上海21" },
+            { index: 2, id: "abc1", name: "测试2", age: 2, address: "上海2", address2: "上海22" },
+            { index: 3, id: "abc2", name: "测试3", age: 3, address: "上海3", address2: "上海23" },
+            { index: 4, id: "abc2", name: "测试4", age: 4, address: "上海4", address2: "上海24" },
+            { index: 5, id: "abc3", name: "测试5", age: 5, address: "上海5", address2: "上海25" },
+            { index: 6, id: "abc3", name: "测试6", age: 6, address: "上海6", address2: "上海26" },
+            { index: 7, id: "abc4", name: "测试7", age: 7, address: "上海7", address2: "上海27" },
+            { index: 8, id: "abc4", name: "测试8", age: 8, address: "上海8", address2: "上海28" },
+            { index: 9, id: "abc4", name: "测试9", age: 9, address: "上海9", address2: "上海29" }
+        ],
+        tablecolumns: [
+            { title: "序号", prop: "index", width: 150, align: "center" },
+            { title: "ID", prop: "id", width: 150, align: "center" },
+            { title: "姓名", prop: "name", width: 150, align: "center" },
+            { title: "年龄", prop: "age", width: 150, align: "center" },
+            { title: "ID", prop: "id", width: 150, align: "center",filter:true}
+        ],
+      }
+    },
+  }
+</script>
+```
+
+:::
+
 ### Table open/hide row
 
 给行数据 data 的某项设置 \_expand 为 true，可以默认展开当前行
@@ -867,56 +911,74 @@ Table 组件内置了一系列的数据渲染模式。
       return {
         loading: false,
         ths: [
-        [
-          {title: '序号', rowspan: 2},
-          {title: '编码', tooltip: true},
-          {title: '信息', colspan: 2},
-          {title: 'address', rowspan: 2},
-        ],[
-          {title: 'ID', prop: 'id', sort: 'auto'},
-          {title: '姓名'},
-          {title: '年龄'},
-        ]
-      ],
-        columns: [
-          { title: "Index", prop: "$index", width: 100 },
-          { title: "ID", prop: "id", width: 100, sort: "auto" },
-          { title: "Name", prop: "name", sort: "auto" },
-          { title: "Age", prop: "age", sort: "auto" },
-          { title: "Address", prop: "address" }
+          [
+            {title: '序号', rowspan: 2},
+            {title: '编码', tooltip: true},
+            {title: '信息', colspan: 2},
+            {title: 'address', rowspan: 2},
+          ],[
+            {title: 'ID', prop: 'id', sort: 'auto'},
+            {title: '姓名'},
+            {title: '年龄'},
+          ]
         ],
-        columns1: [
-        { title: 'Index', prop: '$index', width: 100 , tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">序号<hr>说明：数据的序列号</div>'},
-        { title: 'ID', prop: 'id', width: 100, tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">ID<hr>说明：数据的唯一ID</div>' },
-        { title: 'Name', prop: 'name', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">姓名<hr>说明：用户的姓名</div>' },
-        { title: 'Age', prop: 'age', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">年龄<hr>说明：用户的年龄</div>' },
-        { title: 'Address', prop: 'address', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">地址<hr>说明：用户的地址</div>' },
-      ],
-        datas: [
-          { id: 5, name: "测试5", age: 9, dictData: null, address: "上海" },
-          { id: 6, name: "测试6", age: 8, dictData: 1, address: "上海" ,_disabledSelect: true},
-          { id: 7, name: "测试7", age: 14, dictData: 2, address: "上海" },
-          { id: 5, name: "测试5", age: 17, dictData: 3, address: "上海" },
-          { id: 6, name: "测试6", age: 18, dictData: 1, address: "上海" },
-          { id: 7, name: "测试7", age: 12, dictData: 2, address: "上海" }
+          columns: [
+            { title: "Index", prop: "$index", width: 100 },
+            { title: "ID", prop: "id", width: 100, sort: "auto" },
+            { title: "Name", prop: "name", sort: "auto" },
+            { title: "Age", prop: "age", sort: "auto" },
+            { title: "Address", prop: "address" }
+          ],
+          columns1: [
+          { title: 'Index', prop: '$index', width: 100 , tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">序号<hr>说明：数据的序列号</div>'},
+          { title: 'ID', prop: 'id', width: 100, tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">ID<hr>说明：数据的唯一ID</div>' },
+          { title: 'Name', prop: 'name', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">姓名<hr>说明：用户的姓名</div>' },
+          { title: 'Age', prop: 'age', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">年龄<hr>说明：用户的年龄</div>' },
+          { title: 'Address', prop: 'address', tooltip: true, placement: 'top-start', content: '<div class="table-tr-tooltip">地址<hr>说明：用户的地址</div>' },
         ],
-        datas2: [
-        { id: 5, name: '测试5', age: 12, address: "上海" },
-        { id: 6, name: '测试6', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 5, name: '测试5', age: 12, address: "上海" },
-        { id: 6, name: '测试6', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 5, name: '测试5', age: 12, address: "上海" },
-        { id: 6, name: '测试6', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-        { id: 5, name: '测试5', age: 12, address: "上海" },
-        { id: 6, name: '测试6', age: 12, address: "上海" },
-        { id: 7, name: '测试7', age: 12, address: "上海" },
-      ]
+          datas: [
+            { id: 5, name: "测试5", age: 9, dictData: null, address: "上海" },
+            { id: 6, name: "测试6", age: 8, dictData: 1, address: "上海" ,_disabledSelect: true},
+            { id: 7, name: "测试7", age: 14, dictData: 2, address: "上海" },
+            { id: 5, name: "测试5", age: 17, dictData: 3, address: "上海" },
+            { id: 6, name: "测试6", age: 18, dictData: 1, address: "上海" },
+            { id: 7, name: "测试7", age: 12, dictData: 2, address: "上海" }
+          ],
+          datas2: [
+          { id: 5, name: '测试5', age: 12, address: "上海" },
+          { id: 6, name: '测试6', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 5, name: '测试5', age: 12, address: "上海" },
+          { id: 6, name: '测试6', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 5, name: '测试5', age: 12, address: "上海" },
+          { id: 6, name: '测试6', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+          { id: 5, name: '测试5', age: 12, address: "上海" },
+          { id: 6, name: '测试6', age: 12, address: "上海" },
+          { id: 7, name: '测试7', age: 12, address: "上海" },
+        ],
+        tabledatas: [
+            { index: 1, id: "abc1", name: "测试1", age: 1, address: "上海1", address2: "上海21" },
+            { index: 2, id: "abc1", name: "测试2", age: 2, address: "上海2", address2: "上海22" },
+            { index: 3, id: "abc2", name: "测试3", age: 3, address: "上海3", address2: "上海23" },
+            { index: 4, id: "abc2", name: "测试4", age: 4, address: "上海4", address2: "上海24" },
+            { index: 5, id: "abc3", name: "测试5", age: 5, address: "上海5", address2: "上海25" },
+            { index: 6, id: "abc3", name: "测试6", age: 6, address: "上海6", address2: "上海26" },
+            { index: 7, id: "abc4", name: "测试7", age: 7, address: "上海7", address2: "上海27" },
+            { index: 8, id: "abc4", name: "测试8", age: 8, address: "上海8", address2: "上海28" },
+            { index: 9, id: "abc4", name: "测试9", age: 9, address: "上海9", address2: "上海29" }
+        ],
+        tablecolumns: [
+            { title: "序号", prop: "index", width: 150, align: "center" },
+            { title: "ID", prop: "id", width: 150, align: "center" },
+            { title: "姓名", prop: "name", width: 150, align: "center" },
+            { title: "年龄", prop: "age", width: 150, align: "center" },
+            { title: "ID", prop: "id", width: 150, align: "center",filter:true}
+        ],
       };
     },
     methods: {
@@ -967,7 +1029,20 @@ Table 组件内置了一系列的数据渲染模式。
         let index = ad == bd ? 0 : (ad > bd) ? 1 : -1;
         return data.type == 'asc' ? index: -index;
       })
+    },
+    triggerSort1(data) {
+      console.log(data)
+      this.datas.sort((a, b)=>{
+        let ad = a[data.prop], bd = b[data.prop];
+        let index = ad == bd ? 0 : (ad > bd) ? 1 : -1;
+        return data.type == 'asc' ? index: -index;
+      })
     }
   }
   };
 </script>
+<style>
+  .blue-table-header{
+    overflow:visible;
+  }
+</style>

@@ -11,8 +11,8 @@
 						<th v-if="checkbox&&thindex==0" class="blue-table-th-checkbox" :rowspan="ths.length">
 							<Checkbox
 								v-if="fixedColumnLeft.length==0"
-								:indeterminate="checks.length>0&&checks.length<datas.length"
-								:checked="checks.length>0&&checks.length == datas.length"
+								:indeterminate="checks.length>0&&checks.length<labelData.length"
+								:checked="checks.length>0&&checks.length == labelData.length"
 								@click.native="checkAll"
 							></Checkbox>
 						</th>
@@ -22,6 +22,7 @@
 							v-bind="thdata"
 							:sortStatus="sortStatus"
 							@transformData="transformData"
+							:filterKey="filterKey"
 						></TableTh>
 					</tr>
 				</template>
@@ -29,8 +30,8 @@
 					<th v-if="checkbox" class="blue-table-th-checkbox">
 						<Checkbox
 							v-if="fixedColumnLeft.length==0"
-							:indeterminate="checks.length>0&&checks.length<datas.length"
-							:checked="checks.length>0&&checks.length == datas.length"
+							:indeterminate="checks.length>0&&checks.length<labelData.length"
+							:checked="checks.length>0&&checks.length == labelData.length"
 							@click.native="checkAll"
 						></Checkbox>
 					</th>
@@ -40,6 +41,7 @@
 						v-bind="c"
 						:sortStatus="sortStatus"
 						@transformData="transformData"
+						:filterKey="filterKey"
 					></TableTh>
 				</tr>
 			</table>
@@ -256,8 +258,10 @@ export default {
 				type: null,
 				prop: null
 			},
+			filterKey:[],
 			rowSelected: null,
-			labelData: []
+			labelData: [],
+			grbyResult:{}
 		}
 	},
 	watch: {
@@ -307,6 +311,19 @@ export default {
 	},
 	created() {
 		this.labelData = [...this.datas]
+		this.columns.forEach(elem => {
+			if(elem.filter){
+				this.grbyResult = _.groupBy([...this.datas],elem.prop)
+				for(let i in this.grbyResult){
+					let checkKey = {
+						key:i,
+						title:i
+					}
+					this.filterKey.push(checkKey)
+				}
+				// console.log(this.filterKey)
+			}
+		})
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.resize)
@@ -394,13 +411,10 @@ export default {
 	},
 	methods: {
 		transformData(param) {
-			const key = param.key
-			const val = param.val
-			if (!!val) {
-				let grbyResult = _.groupBy([...this.datas], key)
+			if (!!param && param.length!=0) {
 				let tempArr = []
-				val.forEach(elem => {
-					tempArr = [...tempArr, ...grbyResult[elem]]
+				param.forEach(elem => {
+					tempArr = [...tempArr,...this.grbyResult[elem]]
 				})
 				this.labelData = tempArr
 			} else {

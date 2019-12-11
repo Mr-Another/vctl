@@ -271,7 +271,9 @@
                     { title: "姓名", prop: "name", width: 150, align: "center" },
                     { title: "年龄", prop: "age", width: 150, align: "center" },
                     { title: "地址", prop: "address", width: 150, align: "center" },
-                    { title: "ID", prop: "id", width: 150, align: "center",type:"select",selects:[{key:'abc1',title:'a1'},{key:'abc2',title:'a2'},{key:'abc3',title:'a3'},{key:'abc4',title:'a4'}] },
+                    { title: "ID", prop: "id", width: 150, align: "center",filter:true
+                    }
+                    // [{key:'abc1',title:'a1'},{key:'abc2',title:'a2'},{key:'abc3',title:'a3'},{key:'abc4',title:'a4'}] },
                 ],
                 tablecolumns: [
                     { prop: "index", width: 100 },
