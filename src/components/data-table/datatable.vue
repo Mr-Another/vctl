@@ -178,6 +178,7 @@ export default {
 			this.advfilters.forEach((elem, idx) => {
 				elem.value = ''
 			})
+			this.$emit("filterreset")
 		}
 	},
 	mounted() {
