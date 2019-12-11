@@ -266,7 +266,7 @@ export default {
 	},
 	watch: {
 		datas: {
-			handler() {
+			handler(val,oldVal) {
 				if (
 					this.height ||
 					this.fixedColumnLeft.length ||
@@ -285,6 +285,7 @@ export default {
 					this.checks.splice(0, this.checks.length)
 				}
 				this.datasBak = [...this.datas]
+				this.labelData = [...this.datas]
 			},
 			deep: true
 		},
