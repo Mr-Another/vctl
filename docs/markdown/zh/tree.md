@@ -363,7 +363,7 @@
 | 参数           | 说明                               | 类型    | 可选值                                                | 默认值                     |
 | -------------- | ---------------------------------- | ------- | ----------------------------------------------------- | -------------------------- |
 | chooseMode     | checkbox 选择模式                  | String  | all, some, independent                                | all                        |
-| option         | 配置项，详细参见下面的 option 说明 | Object  | -                                                     |                            |
+| option         | 配置项，详细参见下面的 option 说明 | Object  | -                                                     |  -                          |
 | multiple       | 多选                               | Boolean | -                                                     | false                      |
 | filterable     | 是否可以搜索                       | Boolean | -                                                     | false                      |
 | config         | 使用全局配置的方法                 | String  | -                                                     | -                          |
@@ -375,19 +375,19 @@
 
 | 方法           | 说明                   | 参数                               | 返回值     |
 | -------------- | ---------------------- | ---------------------------------- | ---------- |
-| updateChoose   | 更新选中值(多选)       | (keys, updateValue = true)         | 无         |
-| getChoose      | 获取选中值(多选)       | 无                                 | [TreeItem] |
-| updateSelect   | 更新选中值(单选)       | (keys, updateValue = true)         | 无         |
-| getSelect      | 获取选中值(单选)       | 无                                 | TreeItem   |
-| getFullChoose  | 获取所有选中的值(多选) | 无                                 | [TreeItem] |
-| chooseAll      | 选中所有值(多选)       | 无                                 | 无         |
-| expandAll      | 展开所有的节点         | 无                                 | 无         |
-| expand         | 展开节点               | ([keys])                           | 无         |
-| foldAll        | 收起所有的折叠         | 无                                 | 无         |
-| refresh        | 刷新数据               | 无                                 | 无         |
-| updateTreeItem | 更新 TreeItem，        | (key, { title: '' })               | 无         |
-| appendTreeItem | 插入 TreeItem，        | (parentkey, { id: '', title: '' }) | 无         |
-| removeTreeItem | 删除 TreeItem，        | (key)                              | 无         |
+| updateChoose   | 更新选中值(多选)       | (keys, updateValue = true)         | -         |
+| getChoose      | 获取选中值(多选)       | -                                 | [TreeItem] |
+| updateSelect   | 更新选中值(单选)       | (keys, updateValue = true)         | -         |
+| getSelect      | 获取选中值(单选)       | -                                 | TreeItem   |
+| getFullChoose  | 获取所有选中的值(多选) | -                                 | [TreeItem] |
+| chooseAll      | 选中所有值(多选)       | -                                 | -         |
+| expandAll      | 展开所有的节点         | -                                | -         |
+| expand         | 展开节点               | ([keys])                           | -         |
+| foldAll        | 收起所有的折叠         | -                                 | -         |
+| refresh        | 刷新数据               | -                                 | -         |
+| updateTreeItem | 更新 TreeItem        | (key, { title: '' })               | -         |
+| appendTreeItem | 插入 TreeItem       | (parentkey, { id: '', title: '' }) | -         |
+| removeTreeItem | 删除 TreeItem        | (key)                              | -         |
 
 ### Tree 事件
 
