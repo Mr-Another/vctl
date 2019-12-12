@@ -243,10 +243,6 @@ export default {
 				datas: 0,
 				columns: 0
 			},
-			scrollWidth: 0,
-			scrollHeight: 0,
-			scrollLeft: 0,
-			scrollTop: 0,
 			checks: [],
 			hoveredTr: null,
 			leftWidth: 0,
@@ -261,7 +257,11 @@ export default {
 			filterKey:[],
 			rowSelected: null,
 			labelData: [],
-			grbyResult:{}
+			grbyResult:{},
+			scrollWidth: 0,
+			scrollHeight: 0,
+			scrollLeft: 0,
+			scrollTop: 0
 		}
 	},
 	watch: {
