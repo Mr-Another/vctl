@@ -285,7 +285,7 @@ export default {
 					this.checks.splice(0, this.checks.length)
 				}
 				this.datasBak = [...this.datas]
-				this.labelData = [...this.datas]
+				this.initLableData()
 			},
 			deep: true
 		},
@@ -311,20 +311,7 @@ export default {
 		}
 	},
 	created() {
-		this.labelData = [...this.datas]
-		this.columns.forEach(elem => {
-			if(elem.filter){
-				this.grbyResult = _.groupBy([...this.datas],elem.prop)
-				for(let i in this.grbyResult){
-					let checkKey = {
-						key:i,
-						title:i
-					}
-					this.filterKey.push(checkKey)
-				}
-				// console.log(this.filterKey)
-			}
-		})
+		this.initLableData()
 	},
 	beforeDestroy() {
 		window.removeEventListener('resize', this.resize)
@@ -411,6 +398,21 @@ export default {
 		})
 	},
 	methods: {
+		initLableData(){
+			this.labelData = [...this.datas]
+			this.columns.forEach(elem => {
+				if(elem.filter){
+					this.grbyResult = _.groupBy([...this.datas],elem.prop)
+					for(let i in this.grbyResult){
+						let checkKey = {
+							key:i,
+							title:i
+						}
+						this.filterKey.push(checkKey)
+					}
+				}
+			})
+		},
 		transformData(param) {
 			if (!!param && param.length!=0) {
 				let tempArr = []
