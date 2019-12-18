@@ -7,5 +7,6 @@ src
 .babelrc
 .eslintrc.json
 index.html
+.idea
 
 
