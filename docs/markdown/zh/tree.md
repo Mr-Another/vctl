@@ -505,28 +505,34 @@ export default {
           // }
         },
       param1: {
-          keyName: "id",
-          titleName: "title",
-          dataMode: "list",
-          getDatas: (parent, resolve) => {
-            setTimeout(() => {
-              if (!parent) {
-                resolve([
-                  { id: 1, title: "一级", disabled: true },
-                  { id: 2, title: "二级" },
-                  { id: 3, title: "三级" }
-                ]);
-              } else if (parent.id % 2 == 0) {
-                resolve([]);
-              } else {
-                resolve(genList(parent.title, parent.id, 5, "id", "title"));
-              }
-            }, 100);
-          }
+        keyName: "id",
+        titleName: "title",
+        dataMode: "list",
+        getDatas: (parent, resolve) => {
+          setTimeout(() => {
+            if (!parent) {
+              resolve([
+                { id: 1, title: "一级", disabled: true },
+                { id: 2, title: "二级" },
+                { id: 3, title: "三级" }
+              ]);
+            } else if (parent.id % 2 == 0) {
+              resolve([]);
+            } else {
+              resolve(genList(parent.title, parent.id, 5, "id", "title"));
+            }
+          }, 100);
         }
+      }
     };
   },
   methods: {
+
+    // randerContent(h) {
+    //   return h('span', 'hahahah');
+    // },
+
+
     expand(ids) {
       this.$refs.demo.expand(ids);
     },

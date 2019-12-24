@@ -1,6 +1,10 @@
 <template>
   <div :class="treeCls">
-    <Search v-if="filterable" v-model="searchValue" @onsearch="searchTree" block></Search>
+    <Search 
+      v-if="filterable" 
+      v-model="searchValue" 
+      @onsearch="searchTree" block>
+    </Search>
     <ul class="blue-tree-body">
       <treeItem
         v-for="tree of treeDatas"
@@ -124,7 +128,8 @@ export default {
     className: {
       type: String,
       default: "blue-tree-theme-item-selected"
-    }
+    },
+    render: Function
   },
   data() {
     return {
