@@ -535,11 +535,20 @@ export default {
     };
   },
   methods: {
-    renderContent(h,{}){
-        return h('span', [
-            h('span', '添加'),
-            h('span', '删除')
-        ])
+    renderContent(h,{key, data}) {
+        return (
+          <span>
+            <blue-button size="xs" on-click={ () => this.appendTreeItem(key, data) }>添加</blue-button>
+            <blue-button size="xs" on-click={ () => this.removeTreeItem(key) }>删除</blue-button>
+          </span>
+        )
+    },
+    appendTreeItem(key, value) {
+      console.log(value);
+      this.$refs.demo.appendTreeItem(key, value);
+    },
+    removeTreeItem(key) {
+      this.$refs.demo.removeTreeItem(key);
     },
     expand(ids) {
       this.$refs.demo.expand(ids);

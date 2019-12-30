@@ -1,4 +1,4 @@
-const getParent = function(vm) {
+const getParent = function (vm) {
   let parent = vm.$parent;
   let filterTag = new Set(["Tree", "tree", "blueTree", "blue-tree"]);
   while (
@@ -23,7 +23,6 @@ export default {
   },
   render(h) {
     let parent = getParent(this);
-    console.log(this.data)
     // if (parent.$scopedSlots && parent.$scopedSlots.item) {
     //   return h(
     //     "div",
@@ -32,13 +31,15 @@ export default {
     //     },
     //     [
     //       parent.$scopedSlots.item({
-    //         item: tblueis.data
+    //         item: this.data
     //       })
     //     ]
     //   );
     // }
+    const data = this.data;
+    const key = data.id;
     return (
-      parent.renderContent ? parent.renderContent.call(parent._renderProxy, h, {}) : console.log(2)
+      parent.renderContent ? parent.renderContent.call(parent._renderProxy, h, { key, data }) : null
     )
   }
 };
