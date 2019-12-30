@@ -8,7 +8,7 @@
 		<div class="blue-select-th" v-if="filter">
 			<div ref="labelSelect" class="blue-select-th-title" @click="ifshowcheck">
 				<span>{{title}}</span>
-				<i class="icon-down"></i>
+				<i class="icon-funnelplot"></i>
 			</div>
 			<transition name="fade">
 				<div ref="labelcheck" class="blue-select-th-check" v-show="showcheck">
