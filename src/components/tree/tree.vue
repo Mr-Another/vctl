@@ -18,6 +18,7 @@
         :toggleOnSelect="toggleOnSelect"
         :selectOnClick="selectOnClick"
         :level="0"
+        :render-content="renderContent"
       ></treeItem>
     </ul>
     <Loading :loading="globalloading"></Loading>
@@ -129,7 +130,8 @@ export default {
       type: String,
       default: "blue-tree-theme-item-selected"
     },
-    render: Function
+    render: Function,
+    renderContent: Function
   },
   data() {
     return {

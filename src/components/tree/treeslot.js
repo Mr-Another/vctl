@@ -23,19 +23,22 @@ export default {
   },
   render(h) {
     let parent = getParent(this);
-    if (parent.$scopedSlots && parent.$scopedSlots.item) {
-      return h(
-        "div",
-        {
-          class: "blue-tree-item-slot"
-        },
-        [
-          parent.$scopedSlots.item({
-            item: tblueis.data
-          })
-        ]
-      );
-    }
-    return h("span");
+    console.log(this.data)
+    // if (parent.$scopedSlots && parent.$scopedSlots.item) {
+    //   return h(
+    //     "div",
+    //     {
+    //       class: "blue-tree-item-slot"
+    //     },
+    //     [
+    //       parent.$scopedSlots.item({
+    //         item: tblueis.data
+    //       })
+    //     ]
+    //   );
+    // }
+    return (
+      parent.renderContent ? parent.renderContent.call(parent._renderProxy, h, {}) : console.log(2)
+    )
   }
 };

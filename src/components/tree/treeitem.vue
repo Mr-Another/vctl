@@ -37,7 +37,7 @@
         <span v-else>{{'h.common.empty' | hlang}}</span>
 
         <TreeSlot :data="data.value"></TreeSlot>
-        <Render></Render>
+        <!-- <Render></Render> -->
       </div>
     </div>
     <ul v-if="data.children&&data.children.length>0" class="blue-tree-ul">
@@ -53,13 +53,14 @@
         :toggleOnSelect="toggleOnSelect"
         :selectOnClick="selectOnClick"
         :level="level+1"
+        :render-content="renderContent"
       ></blueTreeItem>
     </ul>
   </li>
 </template>
 <script>
 import TreeSlot from "./treeslot";
-import Render from "./render";
+// import Render from "./render";
 import Checkbox from "@/src/components/checkbox";
 
 export default {
@@ -67,7 +68,7 @@ export default {
   components: {
     Checkbox,
     TreeSlot,
-    Render
+    // Render
   },
   props: {
     data: Object,
@@ -77,7 +78,8 @@ export default {
     chooseMode: String,
     toggleOnSelect: Boolean,
     selectOnClick: Boolean,
-    level: Number
+    level: Number,
+    renderContent: Function,
   },
   data() {
     return {};

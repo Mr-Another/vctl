@@ -33,6 +33,7 @@
       v-model="value"
       @open="open"
       @select="select"
+      :render-content="renderContent"
     ></Tree>
   </div>
 </template>
@@ -106,7 +107,14 @@
       },
       open(data) {
         // console.log(data);
-      }
+      },
+      renderContent(h,{}){
+         render(h) {
+          return h('span', [
+              h('span', '添加'),
+              h('span', '删除')
+          ])
+      },
     }
   };
 </script>
@@ -527,12 +535,12 @@ export default {
     };
   },
   methods: {
-
-    // randerContent(h) {
-    //   return h('span', 'hahahah');
-    // },
-
-
+    renderContent(h,{}){
+        return h('span', [
+            h('span', '添加'),
+            h('span', '删除')
+        ])
+    },
     expand(ids) {
       this.$refs.demo.expand(ids);
     },
