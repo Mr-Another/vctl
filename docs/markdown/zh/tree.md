@@ -543,9 +543,9 @@ export default {
           </span>
         )
     },
-    appendTreeItem(key, value) {
-      console.log(value);
-      this.$refs.demo.appendTreeItem(key, value);
+    appendTreeItem(key, data) {
+      this.$refs.demo.appendTreeItem(key, data);
+
     },
     removeTreeItem(key) {
       this.$refs.demo.removeTreeItem(key);
