@@ -106,7 +106,7 @@ export default {
     },
     filterable: {
       type: Boolean,
-      default: false
+      default: true
     },
     chooseMode: {
       type: String,
@@ -178,6 +178,7 @@ export default {
       }
     },
     appendTreeItem(key, value) {
+      console.log(this.treeObj,this.treeDatas);
       const children = value.children || [];
       children.push({
         title: "test",

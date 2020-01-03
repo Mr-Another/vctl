@@ -12,7 +12,7 @@
     <blue-datatable
     @actionclick="actionclick"
       @pageChange="pageChange"
-      @filtercolleCtionSearch="filtercolleCtionSearch"
+      @filtersearch="filtersearch"
       :tabledatas="tabledatas"
       :tablecolumns="tablecolumns1"
       :actions="actions"
@@ -82,7 +82,7 @@
                 this.$refs.table.pagination.cur = e.cur;
                 this.$refs.table.pagination.size = e.size;
             },
-            filtercolleCtionSearch(params) {
+            filtersearch(params) {
                 console.log(params);
             },
             sort(data) {
@@ -113,7 +113,7 @@
     <blue-datatable
     @actionclick="actionclick"
       @pageChange="pageChange"
-      @filtercolleCtionSearch="filtercolleCtionSearch"
+      @filtersearch="filtersearch"
       :tabledatas="tabledatas"
       :tablecolumns="tablecolumns"
       :actions="actions"
@@ -197,7 +197,7 @@
                 this.$refs.table.pagination.cur = e.cur;
                 this.$refs.table.pagination.size = e.size;
             },
-            filtercolleCtionSearch(params) {
+            filtersearch(params) {
                 console.log(params);
             },
             sort(data) {
@@ -240,6 +240,22 @@
             return {
                 tabledatas: [
                     { index: 1, id: "abc1", name: "测试1", age: 1, address: "上海1", address2: "上海21" },
+                    { index: 2, id: "abc1", name: "测试2", age: 2, address: "上海2", address2: "上海22" },
+                    { index: 3, id: "abc2", name: "测试3", age: 3, address: "上海3", address2: "上海23" },
+                    { index: 4, id: "abc2", name: "测试4", age: 4, address: "上海4", address2: "上海24" },
+                    { index: 5, id: "abc3", name: "测试5", age: 5, address: "上海5", address2: "上海25" },
+                    { index: 6, id: "abc3", name: "测试6", age: 6, address: "上海6", address2: "上海26" },
+                    { index: 7, id: "abc4", name: "测试7", age: 7, address: "上海7", address2: "上海27" },
+                    { index: 8, id: "abc4", name: "测试8", age: 8, address: "上海8", address2: "上海28" },
+                    { index: 9, id: "abc4", name: "测试9", age: 9, address: "上海9", address2: "上海29" },{ index: 1, id: "abc1", name: "测试1", age: 1, address: "上海1", address2: "上海21" },
+                    { index: 2, id: "abc1", name: "测试2", age: 2, address: "上海2", address2: "上海22" },
+                    { index: 3, id: "abc2", name: "测试3", age: 3, address: "上海3", address2: "上海23" },
+                    { index: 4, id: "abc2", name: "测试4", age: 4, address: "上海4", address2: "上海24" },
+                    { index: 5, id: "abc3", name: "测试5", age: 5, address: "上海5", address2: "上海25" },
+                    { index: 6, id: "abc3", name: "测试6", age: 6, address: "上海6", address2: "上海26" },
+                    { index: 7, id: "abc4", name: "测试7", age: 7, address: "上海7", address2: "上海27" },
+                    { index: 8, id: "abc4", name: "测试8", age: 8, address: "上海8", address2: "上海28" },
+                    { index: 9, id: "abc4", name: "测试9", age: 9, address: "上海9", address2: "上海29" },{ index: 1, id: "abc1", name: "测试1", age: 1, address: "上海1", address2: "上海21" },
                     { index: 2, id: "abc1", name: "测试2", age: 2, address: "上海2", address2: "上海22" },
                     { index: 3, id: "abc2", name: "测试3", age: 3, address: "上海3", address2: "上海23" },
                     { index: 4, id: "abc2", name: "测试4", age: 4, address: "上海4", address2: "上海24" },
@@ -313,7 +329,7 @@
                 this.$refs.table.pagination.cur = e.cur;
                 this.$refs.table.pagination.size = e.size;
             },
-            filtercolleCtionSearch(params) {
+            filtersearch(params) {
                 console.log(params);
             },
             sort(data) {

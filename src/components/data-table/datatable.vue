@@ -1,17 +1,6 @@
 <template>
 	<div style="padding:15px;height:100%;position:relative;">
 		<div class="blue-table-top">
-			<div class="blue-table-actions">
-				<slot name="actions"></slot>
-				<blue-button
-					v-for="(ac,index) in actions"
-					:key="index"
-					@click="clickactions(ac)"
-					:icon="ac.icon"
-					:color="ac.color"
-					:name="ac.name"
-				>{{ ac.title }}</blue-button>
-			</div>
 			<div class="blue-table-filters" ref="filters" v-if="showfilters">
 				<slot name="filters" :filters="filters"></slot>
 				<div v-for="(filter,index) in filters" :key="index" class="blue-table-filters-filter">
@@ -52,6 +41,17 @@
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="blue-table-actions">
+				<slot name="actions"></slot>
+				<blue-button
+					v-for="(ac,index) in actions"
+					:key="index"
+					@click="clickactions(ac)"
+					:icon="ac.icon"
+					:color="ac.color"
+					:name="ac.name"
+				>{{ ac.title }}</blue-button>
 			</div>
 		</div>
 		<div ref="pagtable" class="blue-table-bottom">
@@ -166,7 +166,7 @@ export default {
 		},
 		filtersearch(e) {
 			const filterCollection = this.filters.concat(this.advfilters)
-			this.$emit('filtercolleCtionSearch', filterCollection)
+			this.$emit('filtersearch', filterCollection)
 		},
 		filtershow() {
 			this.showform = !this.showform
