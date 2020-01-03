@@ -178,24 +178,14 @@ export default {
       }
     },
     appendTreeItem(key, value) {
-      console.log(this.treeObj,this.treeDatas);
-      const children = value.children || [];
-      children.push({
-        title: "test",
-        expand: true
-      });
-      this.$set(value, "children", children);
-      console.log(value);
-
-      // let parent = this.treeObj[key];
-      // let obj = this.initTreeNode(value, key);
-      // console.log(obj);
-      // if (parent) {
-      //   parent.children.push(obj);
-      // } else {
-      //   this.treeDatas.push(obj);
-      // }
-      // this.treeObj[obj.key] = obj;
+      let parent = this.treeObj[key];
+      let obj = this.initTreeNode(value, key);
+      if (parent) {
+        parent.children.push(obj);
+      } else {
+        this.treeDatas.push(obj);
+      }
+      this.treeObj[obj.key] = obj;
     },
     removeTreeItem(key) {
       let item = this.treeObj[key];
