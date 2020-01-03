@@ -1,6 +1,6 @@
 {
   "name": "blue-ui",
-  "version": "2.0.16",
+  "version": "2.0.17",
   "description": "",
   "main": "dist/blueui.js",
   "scripts": {
