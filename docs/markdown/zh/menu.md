@@ -22,7 +22,7 @@
     <p>
       <blue-switchList
         v-model="theme"
-        :datas="{'blue-menu-white': '白色', 'blue-menu-dark': '黑色'}"
+        :datas="{'blue-menu-white': '白色', 'blue-menu-dark': '黑色', 'blue-menu-green': '绿色'}"
       ></blue-switchList>
     </p>
     <p><blue-switch v-model="accordion" small>手风琴模式</blue-switch></p>
