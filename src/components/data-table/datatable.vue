@@ -60,7 +60,7 @@
 					:height="height"
 					v-bind="$attrs"
 					:loading="loading"
-					:datas="datas"
+					:datas="tabledatas"
 					:columns="tablecolumns"
 					:ths="ths"
 					v-on="$listeners"
@@ -73,7 +73,7 @@
 					:height="height"
 					v-bind="$attrs"
 					:loading="loading"
-					:datas="datas"
+					:datas="tabledatas"
 					:columns="tablecolumns"
 					v-on="$listeners"
 					ref="table"
@@ -159,6 +159,7 @@ export default {
 	},
 	watch: {
 		tabledatas(newValue,value){
+			console.log(newValue,value)
 			this.datas = newValue
 		}
 	},
