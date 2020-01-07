@@ -140,6 +140,48 @@
 }
 
 
+
+.@{menu-prefix}-green {
+  background: @menu-green-color;
+  color: @white-color;
+  .@{menu-prefix} {
+    &-show {
+      &:hover {
+        background: @menu-green-hover-color;
+      }
+    }
+    &-li-opened {
+      background: @menu-green-opende-color;
+    }
+    &-li {
+      position: relative;
+      .@{menu-prefix}{
+        &-show{
+          &:after {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 0px;
+            background: @primary-color;
+          }
+        }
+        &-li-selected{
+          background-color: @menu-green-select-color;
+          color: @white-color;
+          &:after {
+            width: 5px;
+            transition: @transition-time;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
 .@{menu-prefix} {
   &&-size-collapse {
     > .blue-menu-li {
