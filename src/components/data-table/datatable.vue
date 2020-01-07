@@ -157,6 +157,11 @@ export default {
 		this.datas = this.tabledatas
 		this.paginations = this.pagination
 	},
+	watch: {
+		tabledatas(newValue,value){
+			this.datas = newValue
+		}
+	},
 	methods: {
 		pageChange(e) {
 			this.$emit('pageChange', e)
