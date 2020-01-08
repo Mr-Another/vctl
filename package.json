@@ -6,7 +6,7 @@
   "scripts": {
     "dist:style": "gulp --gulpfile build/build-style.js",
     "dist:comp": "webpack --progress --config build/webpack.comp.config.js",
-    "dev": "webpack-dev-server --progress --hot --open --config build/webpack.dev.config.js",
+    "dev": "webpack-dev-server --progress --hot --config build/webpack.dev.config.js",
     "build": "webpack --progress --config build/webpack.prod.config.js",
     "dist": "npm run dist:style && npm run dist:comp "
   },

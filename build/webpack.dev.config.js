@@ -19,7 +19,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     publicPath: "/"
   },
   devServer: {
-    host: "127.0.0.1",
+    host: "0.0.0.0",
+    contentBase: './dist',
+    open:'http://localhost:8085',
     port: 8085,
     publicPath: "/",
     noInfo: true
