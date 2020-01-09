@@ -287,7 +287,7 @@
                     { title: "姓名", prop: "name", width: 150, align: "center" },
                     { title: "年龄", prop: "age", width: 150, align: "center" },
                     { title: "地址", prop: "address", width: 150, align: "center" },
-                    { title: "ID", prop: "id", width: 150, align: "center",filter:true
+                    { title: "ID", prop: "id", width: 150, align: "center"
                     }
                     // [{key:'abc1',title:'a1'},{key:'abc2',title:'a2'},{key:'abc3',title:'a3'},{key:'abc4',title:'a4'}] },
                 ],
@@ -316,6 +316,11 @@
                 }
             }
         },
+        // mounted(){
+		// 	setTimeout(() => {
+		// 		this.tabledatas=[{ index: 1011, id: "abc4", name: "测试9", age: 9, address: "上海9", address2: "上海29" }]
+		// 	}, 3000);
+        // },
         methods: {
             actionclick(e) {
                 console.log(e);
