@@ -45,14 +45,21 @@
         box-sizing: border-box;
       }
       &-required {
-        .@{form-prefix}-item-label::before {
+        .@{form-prefix}-item-label {
+          position: relative;
+        }
+        .@{form-prefix}-item-label::after {
           content: "*";
           color: @red-color;
           font-size: 15px;
-          display: inline-block;
-          margin-right: 4px;
-          line-height: 8px;
-          vertical-align: middle;
+          // display: inline-block;
+          // margin-right: 4px;
+          // line-height: 8px;
+          // vertical-align: middle;
+          display: block;
+          position: absolute;
+          top: 3px;
+          right: 8px;
         }
       }
       &-content {
