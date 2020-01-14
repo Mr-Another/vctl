@@ -159,7 +159,6 @@ export default {
 	},
 	watch: {
 		tabledatas(newValue,value){
-			console.log(newValue,value)
 			this.datas = newValue
 		}
 	},
