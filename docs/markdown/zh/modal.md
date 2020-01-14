@@ -135,9 +135,7 @@
       </div>
       <div slot="footer">
         <blue-button class="blue-btn" @click="close">取消</blue-button>
-        <blue-button class="blue-btn blue-btn-primary" @click="confirm"
-          >确定</blue-button
-        >
+        <blue-button class="blue-btn blue-btn-primary" @click="confirm">确定</blue-button>
       </div>
     </Modal>
   </div>

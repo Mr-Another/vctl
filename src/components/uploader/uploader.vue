@@ -14,7 +14,6 @@
         <i class="icon-plus"></i>
       </div>
     </template>
-
     <template v-if="type=='images'">
       <div class="blue-uploader-image-empty blue-uploader-browse-button" v-if="!readonly">
         <i class="icon-plus"></i>
@@ -58,8 +57,19 @@
           icon="icon-upload"
           class="blue-btn blue-uploader-browse-button"
           v-show="showUploadButton"
+          @click="fileClick"
         >{{showUploadWord}}</button>
       </div>
+
+      <input
+        @change="fileChange($event)"
+        type="file"
+        id="blue-upload-file"
+        name="f1"
+        multiple
+        style="display: none"
+      />
+
       <div class="blue-uploader-files">
         <div v-for="(file, index) in fileList" :key="file.id" class="blue-uploader-file">
           <div class="blue-uploader-file-progress" v-if="file.status==2">
@@ -154,6 +164,14 @@ export default {
     };
   },
   methods: {
+    fileClick() {
+      document.getElementById("blue-upload-file").click();
+    },
+    fileChange(el) {
+      if (!el.target.files[0].size) return;
+      this.fileList(el.target);
+      el.target.value = "";
+    },
     clickfile(file, index) {
       this.$emit("fileclick", file, index);
     },

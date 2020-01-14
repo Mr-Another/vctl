@@ -536,9 +536,10 @@ export default {
   methods: {
     renderContent(h,{key, data}) {
         return (
-          <span>
-            <blue-button size="xs" on-click={ () => this.appendTreeItem(key, data) }>添加</blue-button>
-            <blue-button size="xs" on-click={ () => this.removeTreeItem(key) }>删除</blue-button>
+          <span style="font-size: 18px;">
+            <div class="icon-plus-circle-fill" size="xs" vOn:click_stop_prevent={() => this.appendTreeItem(key, data)}></div>
+            <div class="icon-edit" size="xs"></div>
+            <div class="icon-delete-fill" size="xs" vOn:click_stop_prevent={() => this.removeTreeItem(key)}></div>
           </span>
         )
     },

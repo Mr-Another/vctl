@@ -25,6 +25,10 @@
     }
   }
   &-show {
+    &:hover {
+      cursor: pointer;
+      background-color: @hover-background-color;
+    }
     padding: 3px 0;
     position: relative;
     &-space {
@@ -82,12 +86,7 @@
     }
 
     &.@{tree-prefix}-single {
-      .@{tree-prefix}-show-desc {
-        &:hover {
-          background-color: @hover-background-color;
-        }
-      }
-      .@{tree-prefix}-show-selected .@{tree-prefix}-show-desc {
+      .@{tree-prefix}-show-selected {
         background-color: @primary-color;
         color: @white-color;
       }
