@@ -73,6 +73,8 @@ zh:
               name: Rate
             - title: 表单
               name: Form
+            - title: 上传
+              name: Upload
         - title: 视图
           items:
             - title: 表格

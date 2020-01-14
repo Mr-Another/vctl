@@ -2,8 +2,8 @@
   <li class="blue-tree-li" :class="{'blue-tree-li-opened':data.status.opened}">
     <div
       class="blue-tree-show"
-      @click="clickShow"
-      :class="{'blue-tree-show-disabled':data.status.disabled, 'blue-tree-show-choose': data.status.choose, 'blue-tree-show-indeterminate': data.status.indeterminate, 'blue-tree-show-selected': status.selected == data.key}"
+      @click="select"
+      :class="{'blue-tree-show-disabled':data.status.disabled, 'blue-tree-show-choose': data.status.choose, 'blue-tree-show-indeterminate': data.status.indeterminate, 'blue-tree-show-selected': status.selected == data.key, 'selected': status.selected == data.key}"
       v-show="!data.status.hide"
     >
       <span v-for="l in level" :key="l" class="blue-tree-show-space"></span>
@@ -27,18 +27,12 @@
         :indeterminate="data.status.indeterminate"
         @input="choose(data)"
       ></Checkbox>
-      <div
-        class="blue-tree-show-desc"
-        :class="{'selected': status.selected == data.key}"
-        @click="select"
-      >
+      <div class="blue-tree-show-desc" @click="clickShow">
         <span class="blue-tree-show-icon" :class="data.icon" v-if="data.icon"></span>
         <span v-if="data.title != null">{{data.title}}</span>
         <span v-else>{{'h.common.empty' | hlang}}</span>
-
-        <!-- <Render></Render> -->
+        <TreeSlot :data="data.value"></TreeSlot>
       </div>
-      <TreeSlot :data="data.value"></TreeSlot>
     </div>
     <ul v-if="data.children&&data.children.length>0" class="blue-tree-ul">
       <blueTreeItem
@@ -60,7 +54,6 @@
 </template>
 <script>
 import TreeSlot from "./treeslot";
-// import Render from "./render";
 import Checkbox from "@/src/components/checkbox";
 
 export default {
@@ -68,7 +61,6 @@ export default {
   components: {
     Checkbox,
     TreeSlot
-    // Render
   },
   props: {
     data: Object,
