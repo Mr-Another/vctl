@@ -31,6 +31,33 @@
 
 :::
 
+### 基本调用
+
+:::demo
+
+```html
+<template>
+    <Uploader :type="types"></Uploader>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        types: "images"
+      };
+    },
+    methods: {
+      click(event) {
+        log(event);
+      }
+    }
+  };
+</script>
+```
+
+:::
+
 ### Upload 参数
 
 | 参数     | 说明                     | 类型   | 可选值                       | 默认值 |
@@ -51,7 +78,8 @@
 export default {
     data() {
         return {
-            type: "files"
+            type: "files",
+            types:'images'
         };
     },
     methods: {
