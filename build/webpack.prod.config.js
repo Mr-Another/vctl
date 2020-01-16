@@ -12,7 +12,7 @@ module.exports = merge(baseWebpackConfig, {
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "[name].js",
-    publicPath: "/"
+    publicPath: "/pro/"
   },
   module: {},
   plugins: [

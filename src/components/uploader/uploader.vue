@@ -1,6 +1,14 @@
 <template>
   <div :class="uploaderCls">
     <template v-if="type=='image'">
+    <input
+        @change="fileChange($event)"
+        type="file"
+        id="blue-upload-file"
+        name="f1"
+        multiple
+        style="display: none"
+      />
       <div class="blue-uploader-image" v-if="file">
         <div class="blue-uploader-image-background" :style="getBackgroundImage(file)"></div>
         <div class="blue-uploader-progress" v-if="file.status==2||file.status==1">
@@ -10,12 +18,20 @@
           <div>{{showReUploadWord}}</div>
         </div>
       </div>
-      <div class="blue-uploader-image-empty blue-uploader-browse-button" v-else>
+      <div class="blue-uploader-image-empty blue-uploader-browse-button" @click="fileClick" v-else>
         <i class="icon-plus"></i>
       </div>
     </template>
     <template v-if="type=='images'">
-      <div class="blue-uploader-image-empty blue-uploader-browse-button" v-if="!readonly">
+    <input
+        @change="fileChange($event)"
+        type="file"
+        id="blue-upload-file"
+        name="f1"
+        multiple
+        style="display: none"
+      />
+      <div class="blue-uploader-image-empty blue-uploader-browse-button" @click="fileClick" v-if="!readonly">
         <i class="icon-plus"></i>
       </div>
       <div v-for="(file, index) in fileList" :key="file.id" class="blue-uploader-image">
@@ -61,14 +77,7 @@
         >{{showUploadWord}}</button>
       </div>
 
-      <input
-        @change="fileChange($event)"
-        type="file"
-        id="blue-upload-file"
-        name="f1"
-        multiple
-        style="display: none"
-      />
+      
 
       <div class="blue-uploader-files">
         <div v-for="(file, index) in fileList" :key="file.id" class="blue-uploader-file">
@@ -147,6 +156,19 @@ export default {
     readonly: {
       type: Boolean,
       default: false
+    },
+    headers:Object,
+    action:{
+      type:String,
+      // required:true
+    },
+    data:Object,
+    onBeforeSend:Function,
+    onSuccess:Function,
+    onError:Function,
+    httpRequest:{
+      type:Function,
+      default:null
     }
   },
   data() {
@@ -168,9 +190,23 @@ export default {
       document.getElementById("blue-upload-file").click();
     },
     fileChange(el) {
+      const uploadFile = el.target.files
+      let postFiles = Array.prototype.slice.call(el.target.files);
       if (!el.target.files[0].size) return;
-      this.fileList(el.target);
-      el.target.value = "";
+      console.log(this.param)
+      postFiles.forEach(rawFile => {
+        this.upload(rawFile)
+      })
+    },
+    upload(rawFile){
+      const { uid } = rawFile;
+      console.log(rawFile)
+      const options = {
+        headers:this.headers,
+        file:rawFile,
+        action:this.action,
+      }
+      console.log(options)
     },
     clickfile(file, index) {
       this.$emit("fileclick", file, index);
@@ -259,6 +295,10 @@ export default {
     file() {
       return this.fileList.length ? this.fileList[0] : null;
     }
-  }
+  },
+  mounted() {
+    console.log(this.file)
+    console.log(this.showUploadWord);
+  },
 };
 </script>
