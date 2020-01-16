@@ -17,7 +17,7 @@
 					</div>
 				</div>
 				<div class="blue-btn-group blue-btn-group-circle1 blue-btn-group-s">
-					<blue-button class="blue-btn" @click="filtersearch">
+					<blue-button class="blue-btn blue-btn-primary" @click="filtersearch">
 						<i class="icon-search"></i>
 						<span class="blue-btn-name">搜索</span>
 					</blue-button>
