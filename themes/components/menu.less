@@ -154,7 +154,9 @@
       background: @menu-green-color;
     }
     &-li-opened {
-      background: @menu-green-opende-color;
+      .blue-menu-ul {
+        background: @menu-green-opende-color;
+      }
     }
     &-li {
       position: relative;
@@ -167,7 +169,7 @@
             right: 0;
             bottom: 0;
             width: 0px;
-            background: @primary-color;
+            background: @menu-green-select-after;
           }
         }
         &-li-selected{
