@@ -189,7 +189,7 @@ export default {
 	mounted() {
 		this.height = document.querySelector('.blue-table-bottom').offsetHeight - 80
 		window.onresize = () => {
-			this.height = this.$refs.pagtable.offsetHeight - 80
+			this.height = document.querySelector('.blue-table-bottom').offsetHeight - 80
 		}
 	}
 }
