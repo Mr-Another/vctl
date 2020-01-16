@@ -301,8 +301,6 @@
                 filters: [
                     { title: "姓名", type: "text", name: "name" },
                     { title: "部门", type: "text", name: "dname" },
-                    { title: "日期", type: "date", name: "date" },
-                    { title: "选择", type: "select", name: "select", datas: ["a", "b"] }
                 ],
                 advfilters: [
                     { title: "I D", type: "text", name: "add" },

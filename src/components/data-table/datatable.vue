@@ -1,5 +1,5 @@
 <template>
-	<div style="padding:15px;height:100%;position:relative;">
+	<div ref='resizebox' style="padding:15px;height:100%;position:relative;">
 		<div class="blue-table-top">
 			<div class="blue-table-filters" ref="filters" v-if="showfilters">
 				<slot name="filters" :filters="filters"></slot>
@@ -187,9 +187,9 @@ export default {
 		}
 	},
 	mounted() {
-		this.height = this.$refs.pagtable.offsetHeight - 100
+		this.height = document.querySelector('.blue-table-bottom').offsetHeight - 80
 		window.onresize = () => {
-			this.height = this.$refs.pagtable.offsetHeight - 100
+			this.height = this.$refs.pagtable.offsetHeight - 80
 		}
 	}
 }
