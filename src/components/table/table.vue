@@ -469,9 +469,10 @@ export default {
 		triggerSort(sortStatus, triggerType) {
 			this.sortStatus.prop = sortStatus.prop
 			this.sortStatus.type = sortStatus.type
-			if (triggerType === true) {
-				this.$emit('sort', utils.copy(sortStatus))
-			} else if (triggerType == 'auto') {
+			// if (triggerType === true) {
+			// 	this.$emit('sort', utils.copy(sortStatus))
+			// } else 
+			if (triggerType === true || 'auto') {
 				this.datas.sort((a, b) => {
 					let ad = a[sortStatus.prop]
 					let bd = b[sortStatus.prop]

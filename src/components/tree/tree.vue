@@ -8,13 +8,16 @@
         :param="param"
         :key="tree.key"
         :multiple="multiple"
+        :operation="operation"
         :status="status"
         @trigger="trigger"
+        @appendTreeItem="appendTreeItem"
+        @updateTreeItem="updateTreeItem"
+        @removeTreeItem="removeTreeItem"
         :choose-mode="chooseMode"
         :toggleOnSelect="toggleOnSelect"
         :selectOnClick="selectOnClick"
         :level="0"
-        :render-content="renderContent"
       ></treeItem>
     </ul>
     <Loading :loading="globalloading"></Loading>
@@ -104,6 +107,10 @@ export default {
       type: Boolean,
       default: false
     },
+    operation:{
+      type:Boolean,
+      default: true
+    },
     filterable: {
       type: Boolean,
       default: true
@@ -127,7 +134,6 @@ export default {
       default: "blue-tree-theme-item-selected"
     },
     render: Function,
-    renderContent: Function
   },
   data() {
     return {
@@ -167,6 +173,7 @@ export default {
       }
     },
     updateTreeItem(key, value) {
+      console.log(key,value);
       let item = this.treeObj[key];
       if (item) {
         for (let v of Object.keys(value)) {
@@ -178,6 +185,7 @@ export default {
       }
     },
     appendTreeItem(key, value) {
+      console.log('新增');
       let parent = this.treeObj[key];
       let obj = this.initTreeNode(value, key);
       if (parent) {
@@ -187,8 +195,10 @@ export default {
       }
       this.treeObj[obj.key] = obj;
     },
-    removeTreeItem(key) {
-      let item = this.treeObj[key];
+    removeTreeItem(param) {
+      console.log(this.treeObj);
+      let item = this.treeObj[param.key];
+      console.log(item)
       if (item) {
         let index = this.treeDatas.indexOf(item);
         if (index > -1) {
@@ -199,7 +209,7 @@ export default {
             parent.children.splice(parent.children.indexOf(item), 1);
           }
         }
-        delete this.treeObj[key];
+        delete this.treeObj[param.key];
       }
     },
     searchTree(value) {
@@ -291,6 +301,7 @@ export default {
         loadData.apply(this.param, param);
       }
       this.treeDatas = this.initDatas(datas);
+      console.log(this.treeDatas);
       this.parse();
     },
     initDatas(datas) {

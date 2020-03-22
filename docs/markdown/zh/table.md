@@ -26,7 +26,7 @@
       return {
         columns: [
           { title: "Index", prop: "$index", width: 100 },
-          { title: "ID", prop: "id", width: 100, sort: "auto" },
+          { title: "ID", prop: "id", width: 100, sort: "true" },
           { title: "Name", prop: "name", sort: "auto" },
           { title: "Age", prop: "age", sort: "auto" },
           { title: "Address", prop: "address" }

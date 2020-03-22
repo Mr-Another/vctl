@@ -33,7 +33,6 @@
       v-model="value"
       @open="open"
       @select="select"
-      :render-content="renderContent"
     ></Tree>
   </div>
 </template>

@@ -33,6 +33,11 @@
         <span v-else>{{'h.common.empty' | hlang}}</span>
         <TreeSlot :data="data.value"></TreeSlot>
       </div>
+      <div class="blue-tree-show-menu" :class="{'blue-tree-show-menu-undisable' : status.selected == data.key}" v-if="operation" >
+        <span @click="appendTreeItem(data)" class="blue-tree-show-menu-btn icon-plus-circle"></span>
+        <span @click="updateTreeItem(data)" class="blue-tree-show-menu-btn icon-edit"></span>
+        <span @click="removeTreeItem(data)" class="blue-tree-show-menu-btn icon-delete-fill"></span>
+      </div>
     </div>
     <ul v-if="data.children&&data.children.length>0" class="blue-tree-ul">
       <blueTreeItem
@@ -42,12 +47,15 @@
         :param="param"
         :status="status"
         :multiple="multiple"
+        :operation="operation"
         :choose-mode="chooseMode"
         @trigger="trigger"
+        @appendTreeItem="appendTreeItem"
+        @updateTreeItem="updateTreeItem"
+        @removeTreeItem="removeTreeItem"
         :toggleOnSelect="toggleOnSelect"
         :selectOnClick="selectOnClick"
         :level="level+1"
-        :render-content="renderContent"
       ></blueTreeItem>
     </ul>
   </li>
@@ -66,23 +74,39 @@ export default {
     data: Object,
     param: Object,
     multiple: Boolean,
+    operation:Boolean,
     status: Object,
     chooseMode: String,
     toggleOnSelect: Boolean,
     selectOnClick: Boolean,
     level: Number,
-    renderContent: Function
   },
   data() {
     return {};
   },
   methods: {
+    appendTreeItem(data){
+      console.log(data);
+      const newChild = {id:Number(data.key + '1')}
+      console.log(newChild);
+      // this.$emit('appendTreeItem',data)
+    },
+    updateTreeItem(data){
+      console.log(data);
+      this.$emit('updateTreeItem',data.key,data.value)
+    },
+    removeTreeItem(data){
+      this.$emit('removeTreeItem',data)
+    },
     clickShow() {
       if (this.selectOnClick) {
         this.select();
       }
     },
-    select() {
+    select(e) {
+      if(e.target.classList.contains('blue-tree-show-menu-btn')){
+        return;
+      }
       if (this.toggleOnSelect || this.multiple) {
         this.toggleTree();
       }
